@@ -8,6 +8,7 @@
 *.pdf*
 *.png*
 *mxnetNetworkInfo*
+*TMVAinfo*
 *plots*
 *documentation*
 *__pycache__*
