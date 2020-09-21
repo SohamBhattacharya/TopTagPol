@@ -1,0 +1,201 @@
+DataSetInfo              : [dataset] : Added class "Signal"
+                         : Add Tree tree of type Signal with 4710000 events
+DataSetInfo              : [dataset] : Added class "Background"
+                         : Add Tree tree of type Background with 4710000 events
+Factory                  : Booking method: [1mBDT[0m
+                         : 
+DataSetFactory           : [dataset] : Number of events in input trees
+                         : Dataset[dataset] :     Signal     requirement: "hepTop_genLepTop_deltaR_reco < 1 && hepTop_genLepTop_deltaR_reco < hepTop_genHadTop_deltaR_reco && hepTop_pT_reco > 200 && hepTop_nExcSubJet_reco >= 3"
+                         : Dataset[dataset] :     Signal          -- number of events passed: 3803530  / sum of weights: 3.80353e+06
+                         : Dataset[dataset] :     Signal          -- efficiency             : 0.332375
+                         : Dataset[dataset] :     Background requirement: "hepTop_genHadTop_deltaR_reco < 1 && hepTop_genHadTop_deltaR_reco < hepTop_genLepTop_deltaR_reco && hepTop_pT_reco > 200 && hepTop_nExcSubJet_reco >= 3"
+                         : Dataset[dataset] :     Background      -- number of events passed: 4665126  / sum of weights: 4.66513e+06
+                         : Dataset[dataset] :     Background      -- efficiency             : 0.407666
+                         : Dataset[dataset] :  you have opted for interpreting the requested number of training/testing events
+                         :  to be the number of events AFTER your preselection cuts
+                         : 
+                         : Dataset[dataset] :  you have opted for interpreting the requested number of training/testing events
+                         :  to be the number of events AFTER your preselection cuts
+                         : 
+                         : Number of training and testing events
+                         : ---------------------------------------------------------------------------
+                         : Signal     -- training events            : 3042824
+                         : Signal     -- testing events             : 760706
+                         : Signal     -- training and testing events: 3803530
+                         : Dataset[dataset] : Signal     -- due to the preselection a scaling factor has been applied to the numbers of requested events: 0.332375
+                         : Background -- training events            : 2332563
+                         : Background -- testing events             : 2332563
+                         : Background -- training and testing events: 4665126
+                         : Dataset[dataset] : Background -- due to the preselection a scaling factor has been applied to the numbers of requested events: 0.407666
+                         : 
+DataSetInfo              : Correlation matrix (Signal):
+                         : --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                         :                                                                     hepTop_m_reco hepTop_tau2ratio_reco hepTop_tau3ratio_reco hepTop_tau4ratio_reco min(hepTop_lepSubJet1_miniIso_reco,hepTop_lepSubJet2_miniIso_reco) hepTop_CNN_reco
+                         :                                                      hepTop_m_reco:        +1.000                +0.196                -0.276                +0.039                                                             -0.057          -0.185
+                         :                                              hepTop_tau2ratio_reco:        +0.196                +1.000                -0.379                -0.084                                                             +0.095          -0.272
+                         :                                              hepTop_tau3ratio_reco:        -0.276                -0.379                +1.000                +0.125                                                             +0.003          -0.051
+                         :                                              hepTop_tau4ratio_reco:        +0.039                -0.084                +0.125                +1.000                                                             -0.039          -0.103
+                         : min(hepTop_lepSubJet1_miniIso_reco,hepTop_lepSubJet2_miniIso_reco):        -0.057                +0.095                +0.003                -0.039                                                             +1.000          -0.111
+                         :                                                    hepTop_CNN_reco:        -0.185                -0.272                -0.051                -0.103                                                             -0.111          +1.000
+                         : --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+DataSetInfo              : Correlation matrix (Background):
+                         : --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                         :                                                                     hepTop_m_reco hepTop_tau2ratio_reco hepTop_tau3ratio_reco hepTop_tau4ratio_reco min(hepTop_lepSubJet1_miniIso_reco,hepTop_lepSubJet2_miniIso_reco) hepTop_CNN_reco
+                         :                                                      hepTop_m_reco:        +1.000                +0.341                -0.189                -0.303                                                             -0.045          -0.136
+                         :                                              hepTop_tau2ratio_reco:        +0.341                +1.000                -0.466                -0.307                                                             -0.013          -0.006
+                         :                                              hepTop_tau3ratio_reco:        -0.189                -0.466                +1.000                +0.007                                                             +0.052          +0.169
+                         :                                              hepTop_tau4ratio_reco:        -0.303                -0.307                +0.007                +1.000                                                             +0.009          -0.151
+                         : min(hepTop_lepSubJet1_miniIso_reco,hepTop_lepSubJet2_miniIso_reco):        -0.045                -0.013                +0.052                +0.009                                                             +1.000          +0.030
+                         :                                                    hepTop_CNN_reco:        -0.136                -0.006                +0.169                -0.151                                                             +0.030          +1.000
+                         : --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+DataSetFactory           : [dataset] :  
+                         : 
+Factory                  : [1mTrain all methods[0m
+Factory                  : [dataset] : Create Transformation "I" with events from all classes.
+                         : 
+                         : Transformation, Variable selection : 
+                         : Input : variable 'hepTop_m_reco' <---> Output : variable 'hepTop_m_reco'
+                         : Input : variable 'hepTop_tau2ratio_reco' <---> Output : variable 'hepTop_tau2ratio_reco'
+                         : Input : variable 'hepTop_tau3ratio_reco' <---> Output : variable 'hepTop_tau3ratio_reco'
+                         : Input : variable 'hepTop_tau4ratio_reco' <---> Output : variable 'hepTop_tau4ratio_reco'
+                         : Input : variable 'min(hepTop_lepSubJet1_miniIso_reco,hepTop_lepSubJet2_miniIso_reco)' <---> Output : variable 'min(hepTop_lepSubJet1_miniIso_reco,hepTop_lepSubJet2_miniIso_reco)'
+                         : Input : variable 'hepTop_CNN_reco' <---> Output : variable 'hepTop_CNN_reco'
+TFHandler_Factory        :                                                           Variable                                                                  Mean                                                                  RMS                                                          [        Min                                                                  Max ]
+                         : -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                         :                                                      hepTop_m_reco:                                                              149.68                                                              92.834   [                                                            0.048098                                                              2103.7 ]
+                         :                                              hepTop_tau2ratio_reco:                                                             0.35831                                                             0.17727   [                                                          7.0027e-05                                                             0.93831 ]
+                         :                                              hepTop_tau3ratio_reco:                                                             0.61938                                                             0.16419   [                                                              0.0000                                                              1.1060 ]
+                         :                                              hepTop_tau4ratio_reco:                                                             0.77277                                                             0.10593   [                                                              0.0000                                                              1.1305 ]
+                         : min(hepTop_lepSubJet1_miniIso_reco,hepTop_lepSubJet2_miniIso_reco):                                                              1.4841                                                              5.1386   [                                                              0.0000                                                              999.00 ]
+                         :                                                    hepTop_CNN_reco:                                                             0.56162                                                             0.44851   [                                                          1.3398e-05                                                              1.0000 ]
+                         : -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                         : Ranking input variables (method unspecific)...
+IdTransformation         : Ranking result (top variable is best ranked)
+                         : -------------------------------------------------------------------------------------------
+                         : Rank : Variable                                                           : Separation
+                         : -------------------------------------------------------------------------------------------
+                         :    1 : hepTop_CNN_reco                                                    : 8.328e-01
+                         :    2 : min(hepTop_lepSubJet1_miniIso_reco,hepTop_lepSubJet2_miniIso_reco) : 4.550e-01
+                         :    3 : hepTop_tau2ratio_reco                                              : 1.850e-01
+                         :    4 : hepTop_m_reco                                                      : 1.593e-01
+                         :    5 : hepTop_tau3ratio_reco                                              : 4.409e-02
+                         :    6 : hepTop_tau4ratio_reco                                              : 3.064e-02
+                         : -------------------------------------------------------------------------------------------
+Factory                  : Train method: BDT for Classification
+                         : 
+BDT                      : #events: (reweighted) sig: 2.68769e+06 bkg: 2.68769e+06
+                         : #events: (unweighted) sig: 3042824 bkg: 2332563
+                         : Training 850 Decision Trees ... patience please
+0%, time left: unknown
+6%, time left: 31 mins
+12%, time left: 26 mins
+18%, time left: 24 mins
+25%, time left: 21 mins
+31%, time left: 19 mins
+37%, time left: 17 mins
+43%, time left: 15 mins
+50%, time left: 14 mins
+56%, time left: 12 mins
+62%, time left: 10 mins
+68%, time left: 9 mins
+75%, time left: 7 mins
+81%, time left: 5 mins
+87%, time left: 228 sec
+93%, time left: 115 sec
+                         : Elapsed time for training with 5375387 events: 1.94e+03 sec         
+BDT                      : [dataset] : Evaluation of BDT on training sample (5375387 events)
+0%, time left: unknown
+6%, time left: 188 sec
+12%, time left: 177 sec
+18%, time left: 164 sec
+25%, time left: 150 sec
+31%, time left: 138 sec
+37%, time left: 125 sec
+43%, time left: 113 sec
+50%, time left: 99 sec
+56%, time left: 87 sec
+62%, time left: 75 sec
+68%, time left: 62 sec
+75%, time left: 48 sec
+81%, time left: 36 sec
+87%, time left: 24 sec
+93%, time left: 12 sec
+                         : Elapsed time for evaluation of 5375387 events: 203 sec       
+                         : Creating xml weight file: [0;36mdataset/weights/TMVAClassification_BDT.weights.xml[0m
+                         : Creating standalone class: [0;36mdataset/weights/TMVAClassification_BDT.class.C[0m
+Factory                  : Training finished
+                         : 
+                         : Ranking input variables (method specific)...
+BDT                      : Ranking result (top variable is best ranked)
+                         : ----------------------------------------------------------------------------------------------------
+                         : Rank : Variable                                                           : Variable Importance
+                         : ----------------------------------------------------------------------------------------------------
+                         :    1 : hepTop_CNN_reco                                                    : 2.964e-01
+                         :    2 : hepTop_tau2ratio_reco                                              : 1.679e-01
+                         :    3 : hepTop_m_reco                                                      : 1.673e-01
+                         :    4 : min(hepTop_lepSubJet1_miniIso_reco,hepTop_lepSubJet2_miniIso_reco) : 1.314e-01
+                         :    5 : hepTop_tau3ratio_reco                                              : 1.304e-01
+                         :    6 : hepTop_tau4ratio_reco                                              : 1.065e-01
+                         : ----------------------------------------------------------------------------------------------------
+Factory                  : === Destroy and recreate all methods via weight files for testing ===
+                         : 
+                         : Reading weight file: [0;36mdataset/weights/TMVAClassification_BDT.weights.xml[0m
+Factory                  : [1mTest all methods[0m
+Factory                  : Test method: BDT for Classification performance
+                         : 
+BDT                      : [dataset] : Evaluation of BDT on testing sample (3093269 events)
+0%, time left: unknown
+6%, time left: 94 sec
+12%, time left: 88 sec
+18%, time left: 82 sec
+25%, time left: 75 sec
+31%, time left: 68 sec
+37%, time left: 62 sec
+43%, time left: 56 sec
+50%, time left: 49 sec
+56%, time left: 43 sec
+62%, time left: 37 sec
+68%, time left: 31 sec
+75%, time left: 24 sec
+81%, time left: 18 sec
+87%, time left: 12 sec
+93%, time left: 6 sec
+                         : Elapsed time for evaluation of 3093269 events: 101 sec       
+Factory                  : [1mEvaluate all methods[0m
+Factory                  : Evaluate classifier: BDT
+                         : 
+BDT                      : [dataset] : Loop over test events and fill histograms with classifier response...
+                         : 
+TFHandler_BDT            :                                                           Variable                                                                  Mean                                                                  RMS                                                          [        Min                                                                  Max ]
+                         : -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                         :                                                      hepTop_m_reco:                                                              163.70                                                              93.729   [                                                            0.025854                                                              2283.3 ]
+                         :                                              hepTop_tau2ratio_reco:                                                             0.40334                                                             0.16594   [                                                          4.5943e-05                                                             0.92787 ]
+                         :                                              hepTop_tau3ratio_reco:                                                             0.60209                                                             0.16893   [                                                              0.0000                                                             0.98812 ]
+                         :                                              hepTop_tau4ratio_reco:                                                             0.78036                                                             0.10693   [                                                              0.0000                                                              1.1796 ]
+                         : min(hepTop_lepSubJet1_miniIso_reco,hepTop_lepSubJet2_miniIso_reco):                                                              2.1264                                                              5.1945   [                                                              0.0000                                                              999.00 ]
+                         :                                                    hepTop_CNN_reco:                                                             0.29852                                                             0.39422   [                                                          1.3543e-05                                                              1.0000 ]
+                         : -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                         : 
+                         : Evaluation results ranked by best signal efficiency and purity (area)
+                         : -------------------------------------------------------------------------------------------------------------------
+                         : DataSet       MVA                       
+                         : Name:         Method:          ROC-integ
+                         : dataset       BDT            : 0.988
+                         : -------------------------------------------------------------------------------------------------------------------
+                         : 
+                         : Testing efficiency compared to training efficiency (overtraining check)
+                         : -------------------------------------------------------------------------------------------------------------------
+                         : DataSet              MVA              Signal efficiency: from test sample (from training sample) 
+                         : Name:                Method:          @B=0.01             @B=0.10            @B=0.30   
+                         : -------------------------------------------------------------------------------------------------------------------
+                         : dataset              BDT            : 0.861 (0.861)       0.971 (0.971)      0.990 (0.990)
+                         : -------------------------------------------------------------------------------------------------------------------
+                         : 
+Dataset:dataset          : Created tree 'TestTree' with 3093269 events
+                         : 
+Dataset:dataset          : Created tree 'TrainTree' with 5375387 events
+                         : 
+Factory                  : [1mThank you for using TMVA![0m
+                         : [1mFor citation information, please visit: http://tmva.sf.net/citeTMVA.html[0m
+==> Wrote root file: TMVA.root
+==> TMVAClassification is done!

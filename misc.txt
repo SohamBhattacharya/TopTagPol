@@ -1,0 +1,1 @@
+rsync -asP *.sh *.py *.cc *.h *.cxx sobhatta@gpu01.indiacms.res.in:/home/sobhatta/work/TopTagging/
