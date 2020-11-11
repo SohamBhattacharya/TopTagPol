@@ -64,8 +64,8 @@ python -u plotPolAsymmetry.py \
         3 \
         3 \
     --diffLabels \
-        "A^{L}_{cos#theta*}#minusA^{R}_{cos#theta*}" \
-        "A^{L}_{CNN}#minusA^{R}_{CNN}" \
+        "D_{cos#theta*}" \
+        "D_{CNN}" \
     --legendPos "UL" \
     --xMin -1 \
     --xMax +1 \
@@ -258,8 +258,8 @@ python -u plotPolAsymmetry.py \
         3 \
         3 \
     --diffLabels \
-        "A^{L}_{z#lower[0.7]{l}}#minusA^{R}_{z#lower[0.7]{l}}" \
-        "A^{L}_{CNN}#minusA^{R}_{CNN}" \
+        "D_{z#lower[0.7]{l}}" \
+        "D_{CNN}" \
     --legendPos "UL" \
     --xMin -0.5 \
     --xMax +1 \

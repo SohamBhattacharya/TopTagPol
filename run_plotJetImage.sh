@@ -1244,60 +1244,60 @@ def cleanSpaces(string) :
 #l_job.append(job)
 
 
- ##################################################################################################
- ######################################## Wprime-3TeV (had) #######################################
- ##################################################################################################
-
-cmdStr = """ \
-    python -u plotJetImage.py \
-    --nEventMax 500000 \
-    --process "l_ntupleFile_Wprime_3TeV_had" \
-    --plotStr "h2_hepTop_boosted_fracE_phiEtaPlane_reco" \
-    --cutStr "hepTop_genHadTop_deltaR_reco < 1 and hepTop_genHadTop_deltaR_reco < hepTop_genLepTop_deltaR_reco and hepTop_pT_reco > 200 and hepTop_nExcSubJet_reco >= 3" \
-    --xTitle "Image x-coordinate" \
-    --yTitle "Image y-coordinate" \
-    --zTitle "Fraction of jet energy" \
-    --xMin -1 \
-    --xMax +1 \
-    --yMin -1 \
-    --yMax +1 \
-    --zMin 1e-6 \
-    --zMax 1e-1 \
-    --logZ \
-    --title "t^{had} jet image from W\'_{3 TeV}" \
-    --outFileName "jetImage_hadTop_boosted_Wprime-3TeV" \
-"""
-
-cmdStr = cleanSpaces(cmdStr)
-job = pool.apply_async(os.system, (), dict(command = cmdStr))
-l_job.append(job)
-
-
- #################### eta-phi plane ####################
-
-cmdStr = """ \
-    python -u plotJetImage.py \
-    --nEventMax 500000 \
-    --process "l_ntupleFile_Wprime_3TeV_had" \
-    --plotStr "h2_hepTop_fracE_phiEtaPlane_reco" \
-    --cutStr "hepTop_genHadTop_deltaR_reco < 1 and hepTop_genHadTop_deltaR_reco < hepTop_genLepTop_deltaR_reco and hepTop_pT_reco > 200 and hepTop_nExcSubJet_reco >= 3" \
-    --xTitle "Image x-coordinate" \
-    --yTitle "Image y-coordinate" \
-    --zTitle "Fraction of jet energy" \
-    --xMin -1.5 \
-    --xMax +1.5 \
-    --yMin -1.5 \
-    --yMax +1.5 \
-    --zMin 1e-6 \
-    --zMax 1e-1 \
-    --logZ \
-    --title "t^{had} jet image from W\'_{3 TeV}" \
-    --outFileName "jetImage_hadTop_Wprime-3TeV" \
-"""
-
-cmdStr = cleanSpaces(cmdStr)
-job = pool.apply_async(os.system, (), dict(command = cmdStr))
-l_job.append(job)
+# ##################################################################################################
+# ######################################## Wprime-3TeV (had) #######################################
+# ##################################################################################################
+#
+#cmdStr = """ \
+#    python -u plotJetImage.py \
+#    --nEventMax 500000 \
+#    --process "l_ntupleFile_Wprime_3TeV_had" \
+#    --plotStr "h2_hepTop_boosted_fracE_phiEtaPlane_reco" \
+#    --cutStr "hepTop_genHadTop_deltaR_reco < 1 and hepTop_genHadTop_deltaR_reco < hepTop_genLepTop_deltaR_reco and hepTop_pT_reco > 200 and hepTop_nExcSubJet_reco >= 3" \
+#    --xTitle "Image x-coordinate" \
+#    --yTitle "Image y-coordinate" \
+#    --zTitle "Fraction of jet energy" \
+#    --xMin -1 \
+#    --xMax +1 \
+#    --yMin -1 \
+#    --yMax +1 \
+#    --zMin 1e-6 \
+#    --zMax 1e-1 \
+#    --logZ \
+#    --title "t^{had} jet image from W\'_{3 TeV}" \
+#    --outFileName "jetImage_hadTop_boosted_Wprime-3TeV" \
+#"""
+#
+#cmdStr = cleanSpaces(cmdStr)
+#job = pool.apply_async(os.system, (), dict(command = cmdStr))
+#l_job.append(job)
+#
+#
+# #################### eta-phi plane ####################
+#
+#cmdStr = """ \
+#    python -u plotJetImage.py \
+#    --nEventMax 500000 \
+#    --process "l_ntupleFile_Wprime_3TeV_had" \
+#    --plotStr "h2_hepTop_fracE_phiEtaPlane_reco" \
+#    --cutStr "hepTop_genHadTop_deltaR_reco < 1 and hepTop_genHadTop_deltaR_reco < hepTop_genLepTop_deltaR_reco and hepTop_pT_reco > 200 and hepTop_nExcSubJet_reco >= 3" \
+#    --xTitle "Image x-coordinate" \
+#    --yTitle "Image y-coordinate" \
+#    --zTitle "Fraction of jet energy" \
+#    --xMin -1.5 \
+#    --xMax +1.5 \
+#    --yMin -1.5 \
+#    --yMax +1.5 \
+#    --zMin 1e-6 \
+#    --zMax 1e-1 \
+#    --logZ \
+#    --title "t^{had} jet image from W\'_{3 TeV}" \
+#    --outFileName "jetImage_hadTop_Wprime-3TeV" \
+#"""
+#
+#cmdStr = cleanSpaces(cmdStr)
+#job = pool.apply_async(os.system, (), dict(command = cmdStr))
+#l_job.append(job)
 
 
 # #####################################################################################################
@@ -1379,57 +1379,57 @@ l_job.append(job)
 # ###################################################################################################
 # ######################################## Wprime-3TeV (lep) ########################################
 # ###################################################################################################
-
-cmdStr = """ \
-    python -u plotJetImage.py \
-    --nEventMax 500000 \
-    --process "l_ntupleFile_Wprime_3TeV_lep" \
-    --plotStr "h2_hepTop_boosted_fracE_phiEtaPlane_reco" \
-    --cutStr "hepTop_genLepTop_deltaR_reco < 1 and hepTop_genLepTop_deltaR_reco < hepTop_genHadTop_deltaR_reco and hepTop_pT_reco > 200 and hepTop_nExcSubJet_reco >= 3" \
-    --xTitle "Image x-coordinate" \
-    --yTitle "Image y-coordinate" \
-    --zTitle "Fraction of jet energy" \
-    --xMin -1 \
-    --xMax +1 \
-    --yMin -1 \
-    --yMax +1 \
-    --zMin 1e-6 \
-    --zMax 1e-1 \
-    --logZ \
-    --title "t^{lep} jet image from W\'_{3 TeV}" \
-    --outFileName "jetImage_lepTop_boosted_Wprime-3TeV-L" \
-"""
-
-cmdStr = cleanSpaces(cmdStr)
-job = pool.apply_async(os.system, (), dict(command = cmdStr))
-l_job.append(job)
-
-
- #################### eta-phi plane ####################
-
-cmdStr = """ \
-    python -u plotJetImage.py \
-    --nEventMax 500000 \
-    --process "l_ntupleFile_Wprime_3TeV_lep" \
-    --plotStr "h2_hepTop_fracE_phiEtaPlane_reco" \
-    --cutStr "hepTop_genLepTop_deltaR_reco < 1 and hepTop_genLepTop_deltaR_reco < hepTop_genHadTop_deltaR_reco and hepTop_pT_reco > 200 and hepTop_nExcSubJet_reco >= 3" \
-    --xTitle "Image x-coordinate" \
-    --yTitle "Image y-coordinate" \
-    --zTitle "Fraction of jet energy" \
-    --xMin -1.5 \
-    --xMax +1.5 \
-    --yMin -1.5 \
-    --yMax +1.5 \
-    --zMin 1e-6 \
-    --zMax 1e-1 \
-    --logZ \
-    --title "t^{lep} jet image from W\'_{3 TeV}" \
-    --outFileName "jetImage_lepTop_Wprime-3TeV-L" \
-"""
-
-cmdStr = cleanSpaces(cmdStr)
-job = pool.apply_async(os.system, (), dict(command = cmdStr))
-l_job.append(job)
+#
+#cmdStr = """ \
+#    python -u plotJetImage.py \
+#    --nEventMax 500000 \
+#    --process "l_ntupleFile_Wprime_3TeV_lep" \
+#    --plotStr "h2_hepTop_boosted_fracE_phiEtaPlane_reco" \
+#    --cutStr "hepTop_genLepTop_deltaR_reco < 1 and hepTop_genLepTop_deltaR_reco < hepTop_genHadTop_deltaR_reco and hepTop_pT_reco > 200 and hepTop_nExcSubJet_reco >= 3" \
+#    --xTitle "Image x-coordinate" \
+#    --yTitle "Image y-coordinate" \
+#    --zTitle "Fraction of jet energy" \
+#    --xMin -1 \
+#    --xMax +1 \
+#    --yMin -1 \
+#    --yMax +1 \
+#    --zMin 1e-6 \
+#    --zMax 1e-1 \
+#    --logZ \
+#    --title "t^{lep} jet image from W\'_{3 TeV}" \
+#    --outFileName "jetImage_lepTop_boosted_Wprime-3TeV-L" \
+#"""
+#
+#cmdStr = cleanSpaces(cmdStr)
+#job = pool.apply_async(os.system, (), dict(command = cmdStr))
+#l_job.append(job)
+#
+#
+# #################### eta-phi plane ####################
+#
+#cmdStr = """ \
+#    python -u plotJetImage.py \
+#    --nEventMax 500000 \
+#    --process "l_ntupleFile_Wprime_3TeV_lep" \
+#    --plotStr "h2_hepTop_fracE_phiEtaPlane_reco" \
+#    --cutStr "hepTop_genLepTop_deltaR_reco < 1 and hepTop_genLepTop_deltaR_reco < hepTop_genHadTop_deltaR_reco and hepTop_pT_reco > 200 and hepTop_nExcSubJet_reco >= 3" \
+#    --xTitle "Image x-coordinate" \
+#    --yTitle "Image y-coordinate" \
+#    --zTitle "Fraction of jet energy" \
+#    --xMin -1.5 \
+#    --xMax +1.5 \
+#    --yMin -1.5 \
+#    --yMax +1.5 \
+#    --zMin 1e-6 \
+#    --zMax 1e-1 \
+#    --logZ \
+#    --title "t^{lep} jet image from W\'_{3 TeV}" \
+#    --outFileName "jetImage_lepTop_Wprime-3TeV-L" \
+#"""
+#
+#cmdStr = cleanSpaces(cmdStr)
+#job = pool.apply_async(os.system, (), dict(command = cmdStr))
+#l_job.append(job)
 
 
 # #####################################################################################################

@@ -589,7 +589,8 @@ for iPlot in range(0, len(args.sigFiles)) :
     if (0 not in l_eff_sig_unique) :
         
         l_eff_sig_unique = numpy.append(l_eff_sig_unique, 0.0)
-        l_eff_bkg_unique = numpy.append(l_eff_bkg_unique, max(l_eff_bkg_unique))
+        #l_eff_bkg_unique = numpy.append(l_eff_bkg_unique, max(l_eff_bkg_unique))
+        l_eff_bkg_unique = numpy.append(l_eff_bkg_unique, 0.0)
         
         #l_significance_unique = numpy.append(l_significance_unique, 0.0)
     

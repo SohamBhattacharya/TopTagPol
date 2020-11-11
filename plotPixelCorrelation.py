@@ -450,6 +450,7 @@ a_corrVar = Common.getArrayFromTBranch(
     cutStr = args.cutStr,
     nSel_max = args.nEventMax,
 )
+print(a_corrVar.shape)
 
 a_pixelScaleVar = None
 
@@ -495,6 +496,9 @@ print(a_corrVar.shape)
 print(a_imageHist.shape)
 print(a_imageHist[:, 0, 0].shape)
 
+minCorr = 0
+maxCorr = 0
+
 for iBinX in range(0, nBinX) :
     
     for iBinY in range(0, nBinY) :
@@ -511,6 +515,8 @@ for iBinX in range(0, nBinX) :
             #corr = abs(corr[0, 1]) * 100
             corr = corr[0, 1] * 100
             
+            minCorr = min(minCorr, corr)
+            maxCorr = max(maxCorr, corr)
             
             #corr = numpy.mean(a_imageHist[:, iBinY, iBinX])
             
@@ -535,6 +541,9 @@ for iBinX in range(0, nBinX) :
             #print(corr)
             
             h2_corr.SetBinContent(iBinX+1, iBinY+1, corr)
+
+
+print("minCorr %0.4f, maxCorr %0.4f" %(minCorr, maxCorr))
 
 
 histDetail = Common.HistogramDetails()

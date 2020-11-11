@@ -469,7 +469,7 @@ def getArrayFromTBranch(
         
         elif (version_main == 3) :
             
-            a_var = numpy.array(tuple(a_var_temp), copy = True)
+            a_var[obj_idx: obj_idx+nObj_temp] = numpy.array(tuple(a_var_temp), copy = True)
         
         else :
             

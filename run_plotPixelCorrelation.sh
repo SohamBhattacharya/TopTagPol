@@ -4,7 +4,7 @@ import multiprocessing
 import os
 
 
-nCPU = 10
+nCPU = 4
 
 pool = multiprocessing.Pool(processes = nCPU)
 l_job = []
@@ -49,9 +49,9 @@ def cleanSpaces(string) :
 #cmdStr = cleanSpaces(cmdStr)
 #job = pool.apply_async(os.system, (), dict(command = cmdStr))
 #l_job.append(job)
-#
-#
-#
+
+
+
 #cmdStr = """ \
 #    python -u plotPixelCorrelation.py \
 #    --nEventMax 10000 \
@@ -179,9 +179,9 @@ def cleanSpaces(string) :
 #cmdStr = cleanSpaces(cmdStr)
 #job = pool.apply_async(os.system, (), dict(command = cmdStr))
 #l_job.append(job)
-#
-#
-#
+
+
+
 #cmdStr = """ \
 #    python -u plotPixelCorrelation.py \
 #    --nEventMax 10000 \
@@ -317,7 +317,7 @@ def cleanSpaces(string) :
 
 #cmdStr = """ \
 #    python -u plotPixelCorrelation.py \
-#    --nEventMax 10000 \
+#    --nEventMax 500000 \
 #    --process "l_ntupleFile_ttbar" \
 #    --extraDirSuffixes "network_ttbar-had_vs_qcd_nLayer-3_CNN-1" \
 #    --imageHistName "h2_hepTop_boosted_fracE_phiEtaPlane_reco" \
@@ -350,7 +350,7 @@ def cleanSpaces(string) :
 #
 #cmdStr = """ \
 #    python -u plotPixelCorrelation.py \
-#    --nEventMax 10000 \
+#    --nEventMax 500000 \
 #    --process "l_ntupleFile_qcd" \
 #    --extraDirSuffixes "network_ttbar-had_vs_qcd_nLayer-3_CNN-1" \
 #    --imageHistName "h2_hepTop_boosted_fracE_phiEtaPlane_reco" \
@@ -378,46 +378,46 @@ def cleanSpaces(string) :
 #cmdStr = cleanSpaces(cmdStr)
 #job = pool.apply_async(os.system, (), dict(command = cmdStr))
 #l_job.append(job)
-
-
-
-cmdStr = """ \
-    python -u plotPixelCorrelation.py \
-    --nEventMax 30000 \
-    --process "l_ntupleFile_ttbar" \
-    --extraDirSuffixes "network_ttbar-lep_vs_qcd_nLayer-3_CNN-1" \
-    --imageHistName "h2_hepTop_boosted_track_fracE_phiEtaPlane_reco" \
-    --corrVar "hepTop_CNN_reco" \
-    --pixelScaleVar "hepTop_E_reco" \
-    --cutStr \
-        "hepTop_genLepTop_deltaR_reco < 1 && hepTop_genLepTop_deltaR_reco < hepTop_genHadTop_deltaR_reco && hepTop_pT_reco > 200 && hepTop_nExcSubJet_reco >= 3" \
-    --cutVars \
-        "hepTop_genHadTop_deltaR_reco" \
-        "hepTop_genLepTop_deltaR_reco" \
-        "hepTop_pT_reco" \
-        "hepTop_nExcSubJet_reco" \
-    --xTitle "Image x-coordinate" \
-    --yTitle "Image y-coordinate" \
-    --zTitle "Corr. with t^{lep}/QCD CNN [%]" \
-    --xMin -1.5 \
-    --xMax +1.5 \
-    --yMin -1.5 \
-    --yMax +1.5 \
-    --zMin -100 \
-    --zMax +100 \
-    --title "t^{lep} jets from t#bar{t}" \
-    --outFileName "pixelCorr_lepTop-boosted_with_ttbar-lep-vs-qcd_ttbar" \
-"""
-
-cmdStr = cleanSpaces(cmdStr)
-job = pool.apply_async(os.system, (), dict(command = cmdStr))
-l_job.append(job)
 #
 #
 #
 #cmdStr = """ \
 #    python -u plotPixelCorrelation.py \
-#    --nEventMax 30000 \
+#    --nEventMax 500000 \
+#    --process "l_ntupleFile_ttbar" \
+#    --extraDirSuffixes "network_ttbar-lep_vs_qcd_nLayer-3_CNN-1" \
+#    --imageHistName "h2_hepTop_boosted_fracE_phiEtaPlane_reco" \
+#    --corrVar "hepTop_CNN_reco" \
+#    --pixelScaleVar "1" \
+#    --cutStr \
+#        "hepTop_genLepTop_deltaR_reco < 1 && hepTop_genLepTop_deltaR_reco < hepTop_genHadTop_deltaR_reco && hepTop_pT_reco > 200 && hepTop_nExcSubJet_reco >= 3" \
+#    --cutVars \
+#        "hepTop_genHadTop_deltaR_reco" \
+#        "hepTop_genLepTop_deltaR_reco" \
+#        "hepTop_pT_reco" \
+#        "hepTop_nExcSubJet_reco" \
+#    --xTitle "Image x-coordinate" \
+#    --yTitle "Image y-coordinate" \
+#    --zTitle "Corr. with t^{lep}/QCD CNN [%]" \
+#    --xMin -1.5 \
+#    --xMax +1.5 \
+#    --yMin -1.5 \
+#    --yMax +1.5 \
+#    --zMin -100 \
+#    --zMax +100 \
+#    --title "t^{lep} jets from t#bar{t}" \
+#    --outFileName "pixelCorr_lepTop-boosted_with_ttbar-lep-vs-qcd_ttbar" \
+#"""
+#
+#cmdStr = cleanSpaces(cmdStr)
+#job = pool.apply_async(os.system, (), dict(command = cmdStr))
+#l_job.append(job)
+#
+#
+#
+#cmdStr = """ \
+#    python -u plotPixelCorrelation.py \
+#    --nEventMax 500000 \
 #    --process "l_ntupleFile_qcd" \
 #    --extraDirSuffixes "network_ttbar-lep_vs_qcd_nLayer-3_CNN-1" \
 #    --imageHistName "h2_hepTop_boosted_fracE_phiEtaPlane_reco" \
@@ -446,40 +446,74 @@ l_job.append(job)
 #cmdStr = cleanSpaces(cmdStr)
 #job = pool.apply_async(os.system, (), dict(command = cmdStr))
 #l_job.append(job)
-#
-#
-#
-#cmdStr = """ \
-#    python -u plotPixelCorrelation.py \
-#    --nEventMax 30000 \
-#    --process "l_ntupleFile_ttbar" \
-#    --extraDirSuffixes "network_ttbar_lep-vs-had_nLayer-3_CNN-1" \
-#    --imageHistName "h2_hepTop_boosted_track_fracE_phiEtaPlane_reco" \
-#    --corrVar "hepTop_CNN_reco" \
-#    --pixelScaleVar "hepTop_E_reco" \
-#    --cutStr \
-#        "(hepTop_genLepTop_deltaR_reco < 1 || hepTop_genHadTop_deltaR_reco < 1) && hepTop_pT_reco > 200 && hepTop_nExcSubJet_reco >= 3" \
-#    --cutVars \
-#        "hepTop_genHadTop_deltaR_reco" \
-#        "hepTop_genLepTop_deltaR_reco" \
-#        "hepTop_pT_reco" \
-#        "hepTop_nExcSubJet_reco" \
-#    --xTitle "Image x-coordinate" \
-#    --yTitle "Image y-coordinate" \
-#    --zTitle "Corr. with t^{lep}/t^{had} CNN [%]" \
-#    --xMin -1.5 \
-#    --xMax +1.5 \
-#    --yMin -1.5 \
-#    --yMax +1.5 \
-#    --zMin -100 \
-#    --zMax +100 \
-#    --title "t^{lep}/t^{had} jets from t#bar{t}" \
-#    --outFileName "pixelCorr_top-boosted_with_ttbar-lep-vs-had_ttbar" \
-#"""
-#
-#cmdStr = cleanSpaces(cmdStr)
-#job = pool.apply_async(os.system, (), dict(command = cmdStr))
-#l_job.append(job)
+
+
+
+cmdStr = """ \
+    python -u plotPixelCorrelation.py \
+    --nEventMax 500000 \
+    --process "l_ntupleFile_ttbar" \
+    --extraDirSuffixes "network_ttbar_lep-vs-had_nLayer-3_CNN-1" \
+    --imageHistName "h2_hepTop_boosted_track_fracE_phiEtaPlane_reco" \
+    --corrVar "hepTop_CNN_reco" \
+    --pixelScaleVar "hepTop_E_reco" \
+    --cutStr \
+        "hepTop_genLepTop_deltaR_reco < 1 && hepTop_genLepTop_deltaR_reco < hepTop_genHadTop_deltaR_reco && hepTop_pT_reco > 200 && hepTop_nExcSubJet_reco >= 3" \
+    --cutVars \
+        "hepTop_genHadTop_deltaR_reco" \
+        "hepTop_genLepTop_deltaR_reco" \
+        "hepTop_pT_reco" \
+        "hepTop_nExcSubJet_reco" \
+    --xTitle "Image x-coordinate" \
+    --yTitle "Image y-coordinate" \
+    --zTitle "Corr. with t^{lep}/t^{had} CNN [%]" \
+    --xMin -1.5 \
+    --xMax +1.5 \
+    --yMin -1.5 \
+    --yMax +1.5 \
+    --zMin -100 \
+    --zMax +100 \
+    --title "t^{lep}/t^{had} jets from t#bar{t}" \
+    --outFileName "pixelCorr_lepTop-boosted_with_ttbar-lep-vs-had_ttbar" \
+"""
+
+cmdStr = cleanSpaces(cmdStr)
+job = pool.apply_async(os.system, (), dict(command = cmdStr))
+l_job.append(job)
+
+
+
+cmdStr = """ \
+    python -u plotPixelCorrelation.py \
+    --nEventMax 500000 \
+    --process "l_ntupleFile_ttbar" \
+    --extraDirSuffixes "network_ttbar_lep-vs-had_nLayer-3_CNN-1" \
+    --imageHistName "h2_hepTop_boosted_track_fracE_phiEtaPlane_reco" \
+    --corrVar "hepTop_CNN_reco" \
+    --pixelScaleVar "hepTop_E_reco" \
+    --cutStr \
+        "hepTop_genHadTop_deltaR_reco < 1 && hepTop_genHadTop_deltaR_reco < hepTop_genLepTop_deltaR_reco && hepTop_pT_reco > 200 && hepTop_nExcSubJet_reco >= 3" \
+    --cutVars \
+        "hepTop_genHadTop_deltaR_reco" \
+        "hepTop_genLepTop_deltaR_reco" \
+        "hepTop_pT_reco" \
+        "hepTop_nExcSubJet_reco" \
+    --xTitle "Image x-coordinate" \
+    --yTitle "Image y-coordinate" \
+    --zTitle "Corr. with t^{lep}/t^{had} CNN [%]" \
+    --xMin -1.5 \
+    --xMax +1.5 \
+    --yMin -1.5 \
+    --yMax +1.5 \
+    --zMin -100 \
+    --zMax +100 \
+    --title "t^{lep}/t^{had} jets from t#bar{t}" \
+    --outFileName "pixelCorr_hadTop-boosted_with_ttbar-lep-vs-had_ttbar" \
+"""
+
+cmdStr = cleanSpaces(cmdStr)
+job = pool.apply_async(os.system, (), dict(command = cmdStr))
+l_job.append(job)
 
 
 

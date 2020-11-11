@@ -272,7 +272,7 @@ d_args = vars(args)
 
 
 outFileName = "plots/asymmetry/%s" %(args.outFileName)
-outFileName_config = "plots/ROC/%s_config.txt" %(args.outFileName)
+outFileName_config = "plots/asymmetry/%s_config.txt" %(args.outFileName)
 
 
 os.system("mkdir -p %s" %(outFileName[:outFileName.rfind("/")]))
