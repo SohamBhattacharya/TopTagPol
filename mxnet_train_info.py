@@ -12,7 +12,23 @@ l_varName_common = [
     "hepTop_isMayBeTop_reco",
     "hepTop_nearestGenHadTop_index",
     "hepTop_nearestGenLepTop_index",
-    "hepTop_nExcSubJet_reco"
+    "hepTop_nExcSubJet_reco",
+    
+    "Whad_n_truth",
+    "Wlep_n_truth",
+    "Whad_pid_truth",
+    "Wlep_pid_truth",
+    "hepTop_nearestGenHadW_index",
+    "hepTop_nearestGenLepW_index",
+    "hepTop_genHadW_deltaR_reco",
+    "hepTop_genLepW_deltaR_reco",
+    
+    "Zlep_pid_truth",
+    "Zhad_pid_truth",
+    "hepTop_nearestGenHadZ_index",
+    "hepTop_nearestGenLepZ_index",
+    "hepTop_genHadZ_deltaR_reco",
+    "hepTop_genLepZ_deltaR_reco",
 ]
 
 
@@ -381,6 +397,249 @@ l_ntupleFile_ttbar = Common.mergeListsAlternating(
 d_ntupleFile["l_ntupleFile_ttbar"] = l_ntupleFile_ttbar
 
 
+ ########## W ##########
+l_ntupleFile_W_lep = [
+    "outputTree/W-lep/outputTree_W-lep_001.root",
+    "outputTree/W-lep/outputTree_W-lep_002.root",
+    "outputTree/W-lep/outputTree_W-lep_003.root",
+    "outputTree/W-lep/outputTree_W-lep_004.root",
+    "outputTree/W-lep/outputTree_W-lep_005.root",
+    "outputTree/W-lep/outputTree_W-lep_006.root",
+    "outputTree/W-lep/outputTree_W-lep_007.root",
+    "outputTree/W-lep/outputTree_W-lep_008.root",
+    "outputTree/W-lep/outputTree_W-lep_009.root",
+    "outputTree/W-lep/outputTree_W-lep_010.root",
+    "outputTree/W-lep/outputTree_W-lep_011.root",
+    "outputTree/W-lep/outputTree_W-lep_012.root",
+    "outputTree/W-lep/outputTree_W-lep_013.root",
+    "outputTree/W-lep/outputTree_W-lep_014.root",
+    "outputTree/W-lep/outputTree_W-lep_015.root",
+    "outputTree/W-lep/outputTree_W-lep_016.root",
+    "outputTree/W-lep/outputTree_W-lep_017.root",
+    "outputTree/W-lep/outputTree_W-lep_018.root",
+    "outputTree/W-lep/outputTree_W-lep_019.root",
+    "outputTree/W-lep/outputTree_W-lep_020.root",
+    "outputTree/W-lep/outputTree_W-lep_021.root",
+    "outputTree/W-lep/outputTree_W-lep_022.root",
+    "outputTree/W-lep/outputTree_W-lep_023.root",
+    "outputTree/W-lep/outputTree_W-lep_024.root",
+    "outputTree/W-lep/outputTree_W-lep_025.root",
+    "outputTree/W-lep/outputTree_W-lep_026.root",
+    "outputTree/W-lep/outputTree_W-lep_027.root",
+    "outputTree/W-lep/outputTree_W-lep_028.root",
+    "outputTree/W-lep/outputTree_W-lep_029.root",
+    "outputTree/W-lep/outputTree_W-lep_030.root",
+    "outputTree/W-lep/outputTree_W-lep_031.root",
+    "outputTree/W-lep/outputTree_W-lep_032.root",
+    "outputTree/W-lep/outputTree_W-lep_033.root",
+    "outputTree/W-lep/outputTree_W-lep_034.root",
+    "outputTree/W-lep/outputTree_W-lep_035.root",
+    "outputTree/W-lep/outputTree_W-lep_036.root",
+    "outputTree/W-lep/outputTree_W-lep_037.root",
+    "outputTree/W-lep/outputTree_W-lep_038.root",
+    "outputTree/W-lep/outputTree_W-lep_039.root",
+    "outputTree/W-lep/outputTree_W-lep_040.root",
+    "outputTree/W-lep/outputTree_W-lep_041.root",
+    "outputTree/W-lep/outputTree_W-lep_042.root",
+    "outputTree/W-lep/outputTree_W-lep_043.root",
+    "outputTree/W-lep/outputTree_W-lep_044.root",
+    "outputTree/W-lep/outputTree_W-lep_045.root",
+    "outputTree/W-lep/outputTree_W-lep_046.root",
+    "outputTree/W-lep/outputTree_W-lep_047.root",
+    "outputTree/W-lep/outputTree_W-lep_048.root",
+    "outputTree/W-lep/outputTree_W-lep_049.root",
+    "outputTree/W-lep/outputTree_W-lep_050.root",
+    "outputTree/W-lep/outputTree_W-lep_051.root",
+    "outputTree/W-lep/outputTree_W-lep_052.root",
+    "outputTree/W-lep/outputTree_W-lep_053.root",
+    "outputTree/W-lep/outputTree_W-lep_054.root",
+    "outputTree/W-lep/outputTree_W-lep_055.root",
+    "outputTree/W-lep/outputTree_W-lep_056.root",
+    "outputTree/W-lep/outputTree_W-lep_057.root",
+    "outputTree/W-lep/outputTree_W-lep_058.root",
+    "outputTree/W-lep/outputTree_W-lep_059.root",
+    "outputTree/W-lep/outputTree_W-lep_060.root",
+    "outputTree/W-lep/outputTree_W-lep_061.root",
+    "outputTree/W-lep/outputTree_W-lep_062.root",
+    "outputTree/W-lep/outputTree_W-lep_063.root",
+    "outputTree/W-lep/outputTree_W-lep_064.root",
+    "outputTree/W-lep/outputTree_W-lep_065.root",
+    "outputTree/W-lep/outputTree_W-lep_066.root",
+    "outputTree/W-lep/outputTree_W-lep_067.root",
+    "outputTree/W-lep/outputTree_W-lep_068.root",
+    "outputTree/W-lep/outputTree_W-lep_069.root",
+    "outputTree/W-lep/outputTree_W-lep_070.root",
+    "outputTree/W-lep/outputTree_W-lep_071.root",
+    "outputTree/W-lep/outputTree_W-lep_072.root",
+    "outputTree/W-lep/outputTree_W-lep_073.root",
+    "outputTree/W-lep/outputTree_W-lep_074.root",
+    "outputTree/W-lep/outputTree_W-lep_075.root",
+    "outputTree/W-lep/outputTree_W-lep_076.root",
+    "outputTree/W-lep/outputTree_W-lep_077.root",
+    "outputTree/W-lep/outputTree_W-lep_078.root",
+    "outputTree/W-lep/outputTree_W-lep_079.root",
+    "outputTree/W-lep/outputTree_W-lep_080.root",
+    "outputTree/W-lep/outputTree_W-lep_081.root",
+    "outputTree/W-lep/outputTree_W-lep_082.root",
+    "outputTree/W-lep/outputTree_W-lep_083.root",
+    "outputTree/W-lep/outputTree_W-lep_084.root",
+    "outputTree/W-lep/outputTree_W-lep_085.root",
+    "outputTree/W-lep/outputTree_W-lep_086.root",
+    "outputTree/W-lep/outputTree_W-lep_087.root",
+    "outputTree/W-lep/outputTree_W-lep_088.root",
+    "outputTree/W-lep/outputTree_W-lep_089.root",
+]
+
+d_ntupleFile["l_ntupleFile_W_lep"] = l_ntupleFile_W_lep
+
+
+l_ntupleFile_W_had = [
+    "outputTree/W-had/outputTree_W-had_001.root",
+    "outputTree/W-had/outputTree_W-had_002.root",
+    "outputTree/W-had/outputTree_W-had_003.root",
+    "outputTree/W-had/outputTree_W-had_004.root",
+    "outputTree/W-had/outputTree_W-had_005.root",
+    "outputTree/W-had/outputTree_W-had_006.root",
+    "outputTree/W-had/outputTree_W-had_007.root",
+    "outputTree/W-had/outputTree_W-had_008.root",
+    "outputTree/W-had/outputTree_W-had_009.root",
+    "outputTree/W-had/outputTree_W-had_010.root",
+    "outputTree/W-had/outputTree_W-had_011.root",
+    "outputTree/W-had/outputTree_W-had_012.root",
+    "outputTree/W-had/outputTree_W-had_013.root",
+    "outputTree/W-had/outputTree_W-had_014.root",
+    "outputTree/W-had/outputTree_W-had_015.root",
+    "outputTree/W-had/outputTree_W-had_016.root",
+    "outputTree/W-had/outputTree_W-had_017.root",
+    "outputTree/W-had/outputTree_W-had_018.root",
+    "outputTree/W-had/outputTree_W-had_019.root",
+    "outputTree/W-had/outputTree_W-had_020.root",
+    "outputTree/W-had/outputTree_W-had_021.root",
+    "outputTree/W-had/outputTree_W-had_022.root",
+    "outputTree/W-had/outputTree_W-had_023.root",
+    "outputTree/W-had/outputTree_W-had_024.root",
+    "outputTree/W-had/outputTree_W-had_025.root",
+    "outputTree/W-had/outputTree_W-had_026.root",
+    "outputTree/W-had/outputTree_W-had_027.root",
+    "outputTree/W-had/outputTree_W-had_028.root",
+    "outputTree/W-had/outputTree_W-had_029.root",
+    "outputTree/W-had/outputTree_W-had_030.root",
+    "outputTree/W-had/outputTree_W-had_031.root",
+    "outputTree/W-had/outputTree_W-had_032.root",
+    "outputTree/W-had/outputTree_W-had_033.root",
+    "outputTree/W-had/outputTree_W-had_034.root",
+    "outputTree/W-had/outputTree_W-had_035.root",
+    "outputTree/W-had/outputTree_W-had_036.root",
+    "outputTree/W-had/outputTree_W-had_037.root",
+    "outputTree/W-had/outputTree_W-had_038.root",
+    "outputTree/W-had/outputTree_W-had_039.root",
+    "outputTree/W-had/outputTree_W-had_040.root",
+    "outputTree/W-had/outputTree_W-had_041.root",
+    "outputTree/W-had/outputTree_W-had_042.root",
+    "outputTree/W-had/outputTree_W-had_043.root",
+    "outputTree/W-had/outputTree_W-had_044.root",
+]
+
+d_ntupleFile["l_ntupleFile_W_had"] = l_ntupleFile_W_had
+
+
+
+ ########## Z ##########
+l_ntupleFile_Z_lep = [
+    "outputTree/Z-lep/outputTree_Z-lep_001.root",
+    "outputTree/Z-lep/outputTree_Z-lep_002.root",
+    "outputTree/Z-lep/outputTree_Z-lep_003.root",
+    "outputTree/Z-lep/outputTree_Z-lep_004.root",
+    "outputTree/Z-lep/outputTree_Z-lep_005.root",
+    "outputTree/Z-lep/outputTree_Z-lep_006.root",
+    "outputTree/Z-lep/outputTree_Z-lep_007.root",
+    "outputTree/Z-lep/outputTree_Z-lep_008.root",
+    "outputTree/Z-lep/outputTree_Z-lep_009.root",
+    "outputTree/Z-lep/outputTree_Z-lep_010.root",
+    "outputTree/Z-lep/outputTree_Z-lep_011.root",
+    "outputTree/Z-lep/outputTree_Z-lep_012.root",
+    "outputTree/Z-lep/outputTree_Z-lep_013.root",
+    "outputTree/Z-lep/outputTree_Z-lep_014.root",
+    "outputTree/Z-lep/outputTree_Z-lep_015.root",
+    "outputTree/Z-lep/outputTree_Z-lep_016.root",
+    "outputTree/Z-lep/outputTree_Z-lep_017.root",
+    "outputTree/Z-lep/outputTree_Z-lep_018.root",
+    "outputTree/Z-lep/outputTree_Z-lep_019.root",
+    "outputTree/Z-lep/outputTree_Z-lep_020.root",
+    "outputTree/Z-lep/outputTree_Z-lep_021.root",
+    "outputTree/Z-lep/outputTree_Z-lep_022.root",
+    "outputTree/Z-lep/outputTree_Z-lep_023.root",
+    "outputTree/Z-lep/outputTree_Z-lep_024.root",
+    "outputTree/Z-lep/outputTree_Z-lep_025.root",
+    "outputTree/Z-lep/outputTree_Z-lep_026.root",
+    "outputTree/Z-lep/outputTree_Z-lep_027.root",
+    "outputTree/Z-lep/outputTree_Z-lep_028.root",
+    "outputTree/Z-lep/outputTree_Z-lep_029.root",
+    "outputTree/Z-lep/outputTree_Z-lep_030.root",
+    "outputTree/Z-lep/outputTree_Z-lep_031.root",
+    "outputTree/Z-lep/outputTree_Z-lep_032.root",
+    "outputTree/Z-lep/outputTree_Z-lep_033.root",
+    "outputTree/Z-lep/outputTree_Z-lep_034.root",
+    "outputTree/Z-lep/outputTree_Z-lep_035.root",
+    "outputTree/Z-lep/outputTree_Z-lep_036.root",
+    "outputTree/Z-lep/outputTree_Z-lep_037.root",
+    "outputTree/Z-lep/outputTree_Z-lep_038.root",
+    "outputTree/Z-lep/outputTree_Z-lep_039.root",
+    "outputTree/Z-lep/outputTree_Z-lep_040.root",
+    "outputTree/Z-lep/outputTree_Z-lep_041.root",
+]
+
+d_ntupleFile["l_ntupleFile_Z_lep"] = l_ntupleFile_Z_lep
+
+
+l_ntupleFile_Z_had = [
+    "outputTree/Z-had/outputTree_Z-had_001.root",
+    "outputTree/Z-had/outputTree_Z-had_002.root",
+    "outputTree/Z-had/outputTree_Z-had_003.root",
+    "outputTree/Z-had/outputTree_Z-had_004.root",
+    "outputTree/Z-had/outputTree_Z-had_005.root",
+    "outputTree/Z-had/outputTree_Z-had_006.root",
+    "outputTree/Z-had/outputTree_Z-had_007.root",
+    "outputTree/Z-had/outputTree_Z-had_008.root",
+    "outputTree/Z-had/outputTree_Z-had_009.root",
+    "outputTree/Z-had/outputTree_Z-had_010.root",
+    "outputTree/Z-had/outputTree_Z-had_011.root",
+    "outputTree/Z-had/outputTree_Z-had_012.root",
+    "outputTree/Z-had/outputTree_Z-had_013.root",
+    "outputTree/Z-had/outputTree_Z-had_014.root",
+    "outputTree/Z-had/outputTree_Z-had_015.root",
+    "outputTree/Z-had/outputTree_Z-had_016.root",
+    "outputTree/Z-had/outputTree_Z-had_017.root",
+    "outputTree/Z-had/outputTree_Z-had_018.root",
+    "outputTree/Z-had/outputTree_Z-had_019.root",
+    "outputTree/Z-had/outputTree_Z-had_020.root",
+    "outputTree/Z-had/outputTree_Z-had_021.root",
+    "outputTree/Z-had/outputTree_Z-had_022.root",
+    "outputTree/Z-had/outputTree_Z-had_023.root",
+    "outputTree/Z-had/outputTree_Z-had_024.root",
+    "outputTree/Z-had/outputTree_Z-had_025.root",
+    "outputTree/Z-had/outputTree_Z-had_026.root",
+    "outputTree/Z-had/outputTree_Z-had_027.root",
+    "outputTree/Z-had/outputTree_Z-had_028.root",
+    "outputTree/Z-had/outputTree_Z-had_029.root",
+    "outputTree/Z-had/outputTree_Z-had_030.root",
+    "outputTree/Z-had/outputTree_Z-had_031.root",
+    "outputTree/Z-had/outputTree_Z-had_032.root",
+    "outputTree/Z-had/outputTree_Z-had_033.root",
+    "outputTree/Z-had/outputTree_Z-had_034.root",
+    "outputTree/Z-had/outputTree_Z-had_035.root",
+    "outputTree/Z-had/outputTree_Z-had_036.root",
+    "outputTree/Z-had/outputTree_Z-had_037.root",
+    "outputTree/Z-had/outputTree_Z-had_038.root",
+    "outputTree/Z-had/outputTree_Z-had_039.root",
+    "outputTree/Z-had/outputTree_Z-had_040.root",
+    "outputTree/Z-had/outputTree_Z-had_041.root",
+    "outputTree/Z-had/outputTree_Z-had_042.root",
+]
+
+d_ntupleFile["l_ntupleFile_Z_had"] = l_ntupleFile_Z_had
+
+
  ########## QCD ##########
 l_ntupleFile_qcd = [
     "outputTree/qcd/outputTree_qcd_001.root",
@@ -572,6 +831,36 @@ d_info = {
     },
     
     
+    "ttbar-had_vs_W-had_nLayer-3": {
+        "inputFiles_sig": l_ntupleFile_ttbar,
+        
+        "inputFiles_bkg": l_ntupleFile_W_had,
+        
+        "layerNames": l_layerName_nLayer3,
+        
+        "cutStr_sig": "hepTop_genHadTop_deltaR_reco < 1 and hepTop_genHadTop_deltaR_reco < hepTop_genLepTop_deltaR_reco and hepTop_pT_reco > 200 and hepTop_nExcSubJet_reco >= 3",
+        
+        "cutStr_bkg": "hepTop_genHadW_deltaR_reco < 1 and hepTop_pT_reco > 200 and hepTop_nExcSubJet_reco >= 3",
+        
+        "varNames": l_varName_common,
+    },
+    
+    
+    "ttbar-had_vs_Z-had_nLayer-3": {
+        "inputFiles_sig": l_ntupleFile_ttbar,
+        
+        "inputFiles_bkg": l_ntupleFile_Z_had,
+        
+        "layerNames": l_layerName_nLayer3,
+        
+        "cutStr_sig": "hepTop_genHadTop_deltaR_reco < 1 and hepTop_genHadTop_deltaR_reco < hepTop_genLepTop_deltaR_reco and hepTop_pT_reco > 200 and hepTop_nExcSubJet_reco >= 3",
+        
+        "cutStr_bkg": "hepTop_genHadZ_deltaR_reco < 1 and hepTop_pT_reco > 200 and hepTop_nExcSubJet_reco >= 3",
+        
+        "varNames": l_varName_common,
+    },
+    
+    
     "ttbar-had_vs_qcd_nLayer-3-DetaDphi": {
         "inputFiles_sig": l_ntupleFile_ttbar,
         
@@ -597,6 +886,66 @@ d_info = {
         "cutStr_sig": "hepTop_genLepTop_deltaR_reco < 1 and hepTop_genLepTop_deltaR_reco < hepTop_genHadTop_deltaR_reco and hepTop_pT_reco > 200 and hepTop_nExcSubJet_reco >= 3",
         
         "cutStr_bkg": "hepTop_genHadTop_deltaR_reco < 1 and hepTop_genHadTop_deltaR_reco < hepTop_genLepTop_deltaR_reco and hepTop_pT_reco > 200 and hepTop_nExcSubJet_reco >= 3",
+        
+        "varNames": l_varName_common,
+    },
+    
+    
+    "ttbar-lep_vs_W-lep_nLayer-3": {
+        "inputFiles_sig": l_ntupleFile_ttbar,
+        
+        "inputFiles_bkg": l_ntupleFile_W_lep,
+        
+        "layerNames": l_layerName_nLayer3,
+        
+        "cutStr_sig": "hepTop_genLepTop_deltaR_reco < 1 and hepTop_genLepTop_deltaR_reco < hepTop_genHadTop_deltaR_reco and hepTop_pT_reco > 200 and hepTop_nExcSubJet_reco >= 3",
+        
+        "cutStr_bkg": "hepTop_genLepW_deltaR_reco < 1 and hepTop_pT_reco > 200 and hepTop_nExcSubJet_reco >= 3",
+        
+        "varNames": l_varName_common,
+    },
+    
+    
+    "ttbar-lep_vs_W-had_nLayer-3": {
+        "inputFiles_sig": l_ntupleFile_ttbar,
+        
+        "inputFiles_bkg": l_ntupleFile_W_had,
+        
+        "layerNames": l_layerName_nLayer3,
+        
+        "cutStr_sig": "hepTop_genLepTop_deltaR_reco < 1 and hepTop_genLepTop_deltaR_reco < hepTop_genHadTop_deltaR_reco and hepTop_pT_reco > 200 and hepTop_nExcSubJet_reco >= 3",
+        
+        "cutStr_bkg": "hepTop_genHadW_deltaR_reco < 1 and hepTop_pT_reco > 200 and hepTop_nExcSubJet_reco >= 3",
+        
+        "varNames": l_varName_common,
+    },
+    
+    
+    "ttbar-lep_vs_Z-lep_nLayer-3": {
+        "inputFiles_sig": l_ntupleFile_ttbar,
+        
+        "inputFiles_bkg": l_ntupleFile_Z_lep,
+        
+        "layerNames": l_layerName_nLayer3,
+        
+        "cutStr_sig": "hepTop_genLepTop_deltaR_reco < 1 and hepTop_genLepTop_deltaR_reco < hepTop_genHadTop_deltaR_reco and hepTop_pT_reco > 200 and hepTop_nExcSubJet_reco >= 3",
+        
+        "cutStr_bkg": "hepTop_genLepZ_deltaR_reco < 1 and hepTop_pT_reco > 200 and hepTop_nExcSubJet_reco >= 3",
+        
+        "varNames": l_varName_common,
+    },
+    
+    
+    "ttbar-lep_vs_Z-had_nLayer-3": {
+        "inputFiles_sig": l_ntupleFile_ttbar,
+        
+        "inputFiles_bkg": l_ntupleFile_Z_had,
+        
+        "layerNames": l_layerName_nLayer3,
+        
+        "cutStr_sig": "hepTop_genLepTop_deltaR_reco < 1 and hepTop_genLepTop_deltaR_reco < hepTop_genHadTop_deltaR_reco and hepTop_pT_reco > 200 and hepTop_nExcSubJet_reco >= 3",
+        
+        "cutStr_bkg": "hepTop_genHadZ_deltaR_reco < 1 and hepTop_pT_reco > 200 and hepTop_nExcSubJet_reco >= 3",
         
         "varNames": l_varName_common,
     },

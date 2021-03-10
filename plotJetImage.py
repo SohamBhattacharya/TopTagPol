@@ -22,6 +22,8 @@ import mxnet_train_info
 
 import ROOT
 
+ROOT.gROOT.SetBatch(1)
+
 
 ROOT.gSystem.Load("HeaderFiles/CustomRootDict_cc.so")
 
@@ -272,6 +274,25 @@ def getImageHist(
     
     eventCount = 0
     
+    #nVal = int(tree.Draw(cutStr, "1", "goff"))
+    #
+    #a_isSelected = tree.GetV1()
+    #
+    #if (hasattr(a_isSelected, "SetSize")) :
+    #    
+    #    a_isSelected.SetSize(nVal)
+    #
+    #elif (hasattr(a_isSelected, "reshape")) :
+    #    
+    #    a_isSelected.reshape((nVal,))
+    #
+    #else :
+    #    
+    #    print("Error: cannot read entries with GetVN()")
+    #    exit(1)
+    
+    count = -1
+    
     for iEvent in range(0, nEventSel) :
         
         #eventNumber = eventList_temp.GetEntry(iEvent)
@@ -285,33 +306,70 @@ def getImageHist(
         
         nHist = len(a_hist)
         
+        if (not nHist) :
+            continue
+        
+        nVal = int(tree.Draw(cutStr, "1", "goff", 1, iEvent))
+        
+        if (nHist != nVal) :
+            
+            print("Variable: %s" %(varName))
+            print("Selection: %s" %(cutStr))
+            print("Size mismatch in getImageHist(...): No. of histograms (%d) not same as no. elements in selection (%d), in event %d. " %(nHist, nVal, iEvent))
+            exit(1)
+        
+        a_isSelected = tree.GetV1()
+        
+        if (hasattr(a_isSelected, "SetSize")) :
+            
+            a_isSelected.SetSize(nVal)
+        
+        elif (hasattr(a_isSelected, "reshape")) :
+            
+            a_isSelected.reshape((nVal,))
+        
+        else :
+            
+            print("Error: cannot read entries with GetVN()")
+            exit(1)
+        
         for iHist in range(0, nHist) :
             
-            cutStr_eval = cutStr
+            count += 1
             
-            for iCutVar in range(0, len(l_cutVar)) :
-                
-                if (l_cutVar[iCutVar] in cutStr_eval) :
-                    
-                    cutVarVal = getattr(tree, l_cutVar[iCutVar])[iHist]
-                    
-                    cutStr_eval = cutStr_eval.replace(l_cutVar[iCutVar], str(cutVarVal))
+            #cutStr_eval = cutStr
+            #
+            #for iCutVar in range(0, len(l_cutVar)) :
+            #    
+            #    if (l_cutVar[iCutVar] in cutStr_eval) :
+            #        
+            #        cutVarVal = getattr(tree, l_cutVar[iCutVar])[iHist]
+            #        
+            #        cutStr_eval = cutStr_eval.replace(l_cutVar[iCutVar], str(cutVarVal))
+            #
+            ##print(iEvent, iHist, cutStr_eval)
+            #
+            #if (not eval(cutStr_eval)) :
+            #    
+            #    continue
+            #
+            ##varValue = getattr(tree, varInfo.varName)
+            ##
+            ##if (varInfo.varIndex >= 0) :
+            ##    
+            ##    varValue = varValue[varInfo.varIndex]
+            ##
+            ##print varValue
+            ##
+            ##l_var.append(varValue)
             
-            #print(iEvent, iHist, cutStr_eval)
+            #if (not a_isSelected[count]) :
+            #    
+            #    continue
             
-            if (not eval(cutStr_eval)) :
+            if (not a_isSelected[iHist]) :
                 
                 continue
-            
-            #varValue = getattr(tree, varInfo.varName)
-            #
-            #if (varInfo.varIndex >= 0) :
-            #    
-            #    varValue = varValue[varInfo.varIndex]
-            #
-            #print varValue
-            #
-            #l_var.append(varValue)
             
             hist = a_hist[iHist]
             

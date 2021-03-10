@@ -23,6 +23,8 @@ import mxnet_train_info
 
 import ROOT
 
+ROOT.gROOT.SetBatch(1)
+
 
 #pprinter = pprint.PrettyPrinter(width = 500, depth = 2)
 

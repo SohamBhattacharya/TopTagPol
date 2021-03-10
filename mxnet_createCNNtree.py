@@ -46,7 +46,7 @@ parser.add_argument(
 
 parser.add_argument(
     "--trainingDirName",
-    help = "Training directory name",
+    help = "Training directory name (just the name, not the path)",
     type = str,
     required = True,
 )

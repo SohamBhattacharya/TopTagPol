@@ -28,6 +28,8 @@ import multiprocessing
 
 import ROOT
 
+ROOT.gROOT.SetBatch(1)
+
 import tdrstyle
 
 ##from numba import jit

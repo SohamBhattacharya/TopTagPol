@@ -44,17 +44,17 @@ nThread = 30;
 
 
 
-l_inFileName_sig = mxnet_train_info.d_ntupleFile["l_ntupleFile_stop_L"]
-l_inFileName_bkg = mxnet_train_info.d_ntupleFile["l_ntupleFile_stop_R"]
-infileName_extra_dirSuffix = "network_stop-lep_LvsR_nLayer-3_CNN-1"
-
-cutStr_sig = "hepTop_genLepTop_deltaR_reco < 1 && hepTop_genLepTop_deltaR_reco < hepTop_genHadTop_deltaR_reco && hepTop_pT_reco > 200 && hepTop_nExcSubJet_reco >= 3"
-cutStr_bkg = "hepTop_genLepTop_deltaR_reco < 1 && hepTop_genLepTop_deltaR_reco < hepTop_genHadTop_deltaR_reco && hepTop_pT_reco > 200 && hepTop_nExcSubJet_reco >= 3"
-
-l_varName = [
-    "hepTop_zl_reco",
-    "hepTop_CNN_reco",
-]
+#l_inFileName_sig = mxnet_train_info.d_ntupleFile["l_ntupleFile_stop_L"]
+#l_inFileName_bkg = mxnet_train_info.d_ntupleFile["l_ntupleFile_stop_R"]
+#infileName_extra_dirSuffix = "network_stop-lep_LvsR_nLayer-3_CNN-1"
+#
+#cutStr_sig = "hepTop_genLepTop_deltaR_reco < 1 && hepTop_genLepTop_deltaR_reco < hepTop_genHadTop_deltaR_reco && hepTop_pT_reco > 200 && hepTop_nExcSubJet_reco >= 3"
+#cutStr_bkg = "hepTop_genLepTop_deltaR_reco < 1 && hepTop_genLepTop_deltaR_reco < hepTop_genHadTop_deltaR_reco && hepTop_pT_reco > 200 && hepTop_nExcSubJet_reco >= 3"
+#
+#l_varName = [
+#    "hepTop_zl_reco",
+#    "hepTop_CNN_reco",
+#]
 
 
 
@@ -87,7 +87,7 @@ l_varName = [
 #    "hepTop_tau2ratio_reco",
 #    "hepTop_tau3ratio_reco",
 #    "hepTop_tau4ratio_reco",
-#    "min(hepTop_lepSubJet1_miniIso_reco, hepTop_lepSubJet2_miniIso_reco)",
+#    #"min(hepTop_lepSubJet1_miniIso_reco, hepTop_lepSubJet2_miniIso_reco)",
 #    "hepTop_CNN_reco",
 #]
 
@@ -108,6 +108,75 @@ l_varName = [
 #    #"min(hepTop_lepSubJet1_miniIso_reco, hepTop_lepSubJet2_miniIso_reco)",
 #    "hepTop_CNN_reco",
 #]
+
+
+
+l_inFileName_sig = mxnet_train_info.d_ntupleFile["l_ntupleFile_ttbar"]
+l_inFileName_bkg = mxnet_train_info.d_ntupleFile["l_ntupleFile_W_lep"]
+infileName_extra_dirSuffix = "network_ttbar-lep_vs_W-lep_nLayer-3_CNN-1"
+
+cutStr_sig = "hepTop_genLepTop_deltaR_reco < 1 && hepTop_genLepTop_deltaR_reco < hepTop_genHadTop_deltaR_reco && hepTop_pT_reco > 200 && hepTop_nExcSubJet_reco >= 3"
+cutStr_bkg = "hepTop_genLepW_deltaR_reco < 1 && hepTop_pT_reco > 200 && hepTop_nExcSubJet_reco >= 3"
+
+l_varName = [
+    "hepTop_m_reco",
+    "hepTop_tau2ratio_reco",
+    "hepTop_tau3ratio_reco",
+    "hepTop_tau4ratio_reco",
+    "hepTop_CNN_reco",
+]
+
+
+
+#l_inFileName_sig = mxnet_train_info.d_ntupleFile["l_ntupleFile_ttbar"]
+#l_inFileName_bkg = mxnet_train_info.d_ntupleFile["l_ntupleFile_Z_lep"]
+#infileName_extra_dirSuffix = "network_ttbar-lep_vs_Z-lep_nLayer-3_CNN-1"
+#
+#cutStr_sig = "hepTop_genLepTop_deltaR_reco < 1 && hepTop_genLepTop_deltaR_reco < hepTop_genHadTop_deltaR_reco && hepTop_pT_reco > 200 && hepTop_nExcSubJet_reco >= 3"
+#cutStr_bkg = "hepTop_genLepZ_deltaR_reco < 1 && hepTop_pT_reco > 200 && hepTop_nExcSubJet_reco >= 3"
+#
+#l_varName = [
+#    "hepTop_m_reco",
+#    "hepTop_tau2ratio_reco",
+#    "hepTop_tau3ratio_reco",
+#    "hepTop_tau4ratio_reco",
+#    "hepTop_CNN_reco",
+#]
+
+
+
+#l_inFileName_sig = mxnet_train_info.d_ntupleFile["l_ntupleFile_ttbar"]
+#l_inFileName_bkg = mxnet_train_info.d_ntupleFile["l_ntupleFile_W_had"]
+#infileName_extra_dirSuffix = "network_ttbar-lep_vs_W-had_nLayer-3_CNN-1"
+#
+#cutStr_sig = "hepTop_genLepTop_deltaR_reco < 1 && hepTop_genLepTop_deltaR_reco < hepTop_genHadTop_deltaR_reco && hepTop_pT_reco > 200 && hepTop_nExcSubJet_reco >= 3"
+#cutStr_bkg = "hepTop_genHadW_deltaR_reco < 1 && hepTop_pT_reco > 200 && hepTop_nExcSubJet_reco >= 3"
+#
+#l_varName = [
+#    "hepTop_m_reco",
+#    "hepTop_tau2ratio_reco",
+#    "hepTop_tau3ratio_reco",
+#    "hepTop_tau4ratio_reco",
+#    "hepTop_CNN_reco",
+#]
+
+
+
+#l_inFileName_sig = mxnet_train_info.d_ntupleFile["l_ntupleFile_ttbar"]
+#l_inFileName_bkg = mxnet_train_info.d_ntupleFile["l_ntupleFile_Z_had"]
+#infileName_extra_dirSuffix = "network_ttbar-lep_vs_Z-had_nLayer-3_CNN-1"
+#
+#cutStr_sig = "hepTop_genLepTop_deltaR_reco < 1 && hepTop_genLepTop_deltaR_reco < hepTop_genHadTop_deltaR_reco && hepTop_pT_reco > 200 && hepTop_nExcSubJet_reco >= 3"
+#cutStr_bkg = "hepTop_genHadZ_deltaR_reco < 1 && hepTop_pT_reco > 200 && hepTop_nExcSubJet_reco >= 3"
+#
+#l_varName = [
+#    "hepTop_m_reco",
+#    "hepTop_tau2ratio_reco",
+#    "hepTop_tau3ratio_reco",
+#    "hepTop_tau4ratio_reco",
+#    "hepTop_CNN_reco",
+#]
+
 
 
 splitRatio_sig = 4
@@ -175,6 +244,14 @@ for iFile, iFileName in enumerate(l_inFileName_extra_bkg) :
 chain_sig.AddFriend(chain_extra_sig)
 chain_bkg.AddFriend(chain_extra_bkg)
 
+t = ROOT.TTree("t", "t")
+a = array.array("d", [0.0])
+t.Branch("hepTop_genHadW_deltaR_reco", a, "hepTop_genHadW_deltaR_reco/D")
+t.Branch("hepTop_genHadZ_deltaR_reco", a, "hepTop_genHadZ_deltaR_reco/D")
+t.Branch("hepTop_genLepW_deltaR_reco", a, "hepTop_genLepW_deltaR_reco/D")
+t.Branch("hepTop_genLepZ_deltaR_reco", a, "hepTop_genLepZ_deltaR_reco/D")
+chain_sig.AddFriend(t)
+
 
 outFileName = "TMVA.root"
 outFile = ROOT.TFile.Open(outFileName, "RECREATE")
@@ -215,7 +292,8 @@ dataloader.PrepareTrainingAndTestTree(
     
     #"nTrain_Signal=0:nTrain_Background=0:SplitMode=Random:NormMode=NumEvents:!V"
     
-    "nTrain_Signal=%d:nTrain_Background=%d:SplitMode=Random:NormMode=NumEvents:!V" %(nEventTrn_sig, nEventTrn_bkg)
+    #"nTrain_Signal=%d:nTrain_Background=%d:SplitMode=Random:NormMode=NumEvents:!V" %(nEventTrn_sig, nEventTrn_bkg)
+    "nTrain_Signal=%d:nTrain_Background=%d:SplitMode=Random:NormMode=EqualNumEvents:!V" %(nEventTrn_sig, nEventTrn_bkg)
 )
 
 

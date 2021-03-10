@@ -69,6 +69,12 @@ double _b_etaCut = 2.4;
 double _t_pTcut = 50;
 double _t_etaCut = 2.4;
 
+double _W_pTcut = 50;
+double _W_etaCut = 2.4;
+
+double _Z_pTcut = 50;
+double _Z_etaCut = 2.4;
+
 double _el_pTcut = 30;
 double _el_etaCut = 2.4;
 double _el_relIsoCut = 0.15;
@@ -134,6 +140,7 @@ class OutputInfo
     std::vector <double> v_hadTop_px_truth;
     std::vector <double> v_hadTop_py_truth;
     std::vector <double> v_hadTop_pz_truth;
+    std::vector <double> v_hadTop_pid_truth;
     
     
     // b from hadronic top
@@ -155,10 +162,24 @@ class OutputInfo
     std::vector <double> v_hadTopW_pT_truth;
     std::vector <double> v_hadTopW_eta_truth;
     std::vector <double> v_hadTopW_phi_truth;
+    std::vector <double> v_hadTopW_m_truth;
     std::vector <double> v_hadTopW_E_truth;
     std::vector <double> v_hadTopW_px_truth;
     std::vector <double> v_hadTopW_py_truth;
     std::vector <double> v_hadTopW_pz_truth;
+    
+    
+    // Hadronic W
+    int hadW_n_truth;
+    std::vector <double> v_hadW_pT_truth;
+    std::vector <double> v_hadW_eta_truth;
+    std::vector <double> v_hadW_phi_truth;
+    std::vector <double> v_hadW_m_truth;
+    std::vector <double> v_hadW_E_truth;
+    std::vector <double> v_hadW_px_truth;
+    std::vector <double> v_hadW_py_truth;
+    std::vector <double> v_hadW_pz_truth;
+    std::vector <double> v_hadW_pid_truth;
     
     
     // Hadronic W q1
@@ -201,6 +222,7 @@ class OutputInfo
     std::vector <double> v_lepTop_px_truth;
     std::vector <double> v_lepTop_py_truth;
     std::vector <double> v_lepTop_pz_truth;
+    std::vector <double> v_lepTop_pid_truth;
     
     std::vector <double> v_lepTopVis_pT_truth;
     std::vector <double> v_lepTopVis_eta_truth;
@@ -228,10 +250,24 @@ class OutputInfo
     std::vector <double> v_lepTopW_pT_truth;
     std::vector <double> v_lepTopW_eta_truth;
     std::vector <double> v_lepTopW_phi_truth;
+    std::vector <double> v_lepTopW_m_truth;
     std::vector <double> v_lepTopW_E_truth;
     std::vector <double> v_lepTopW_px_truth;
     std::vector <double> v_lepTopW_py_truth;
     std::vector <double> v_lepTopW_pz_truth;
+    
+    
+    // Leptonic W
+    int lepW_n_truth;
+    std::vector <double> v_lepW_pT_truth;
+    std::vector <double> v_lepW_eta_truth;
+    std::vector <double> v_lepW_phi_truth;
+    std::vector <double> v_lepW_m_truth;
+    std::vector <double> v_lepW_E_truth;
+    std::vector <double> v_lepW_px_truth;
+    std::vector <double> v_lepW_py_truth;
+    std::vector <double> v_lepW_pz_truth;
+    std::vector <double> v_lepW_pid_truth;
     
     
     // Leptonic W lepton
@@ -250,6 +286,76 @@ class OutputInfo
     std::vector <double> v_lepTop_deltaRbl_truth;
     std::vector <double> v_lepTop_mbl_truth;
     std::vector <double> v_zl_truth;
+    
+    
+    // Hadronic Z
+    int hadZ_n_truth;
+    std::vector <double> v_hadZ_pT_truth;
+    std::vector <double> v_hadZ_eta_truth;
+    std::vector <double> v_hadZ_phi_truth;
+    std::vector <double> v_hadZ_m_truth;
+    std::vector <double> v_hadZ_E_truth;
+    std::vector <double> v_hadZ_px_truth;
+    std::vector <double> v_hadZ_py_truth;
+    std::vector <double> v_hadZ_pz_truth;
+    
+    
+    // Hadronic Z q1
+    std::vector <double> v_Zq1_pT_truth;
+    std::vector <double> v_Zq1_eta_truth;
+    std::vector <double> v_Zq1_phi_truth;
+    std::vector <double> v_Zq1_E_truth;
+    std::vector <double> v_Zq1_px_truth;
+    std::vector <double> v_Zq1_py_truth;
+    std::vector <double> v_Zq1_pz_truth;
+    std::vector <double> v_Zq1_pid_truth;
+    std::vector <double> v_Zq1_Zq2deltaR_truth;
+    
+    
+    // Hadronic Z q2
+    std::vector <double> v_Zq2_pT_truth;
+    std::vector <double> v_Zq2_eta_truth;
+    std::vector <double> v_Zq2_phi_truth;
+    std::vector <double> v_Zq2_E_truth;
+    std::vector <double> v_Zq2_px_truth;
+    std::vector <double> v_Zq2_py_truth;
+    std::vector <double> v_Zq2_pz_truth;
+    std::vector <double> v_Zq2_pid_truth;
+    
+    
+    // Leptonic Z
+    int lepZ_n_truth;
+    std::vector <double> v_lepZ_pT_truth;
+    std::vector <double> v_lepZ_eta_truth;
+    std::vector <double> v_lepZ_phi_truth;
+    std::vector <double> v_lepZ_m_truth;
+    std::vector <double> v_lepZ_E_truth;
+    std::vector <double> v_lepZ_px_truth;
+    std::vector <double> v_lepZ_py_truth;
+    std::vector <double> v_lepZ_pz_truth;
+    
+    
+    // Hadronic Z q1
+    std::vector <double> v_Zlep1_pT_truth;
+    std::vector <double> v_Zlep1_eta_truth;
+    std::vector <double> v_Zlep1_phi_truth;
+    std::vector <double> v_Zlep1_E_truth;
+    std::vector <double> v_Zlep1_px_truth;
+    std::vector <double> v_Zlep1_py_truth;
+    std::vector <double> v_Zlep1_pz_truth;
+    std::vector <double> v_Zlep1_pid_truth;
+    std::vector <double> v_Zlep1_Zlep2deltaR_truth;
+    
+    
+    // Hadronic Z q2
+    std::vector <double> v_Zlep2_pT_truth;
+    std::vector <double> v_Zlep2_eta_truth;
+    std::vector <double> v_Zlep2_phi_truth;
+    std::vector <double> v_Zlep2_E_truth;
+    std::vector <double> v_Zlep2_px_truth;
+    std::vector <double> v_Zlep2_py_truth;
+    std::vector <double> v_Zlep2_pz_truth;
+    std::vector <double> v_Zlep2_pid_truth;
     
     
     // c
@@ -333,14 +439,26 @@ class OutputInfo
     
     std::vector <double> v_hepTop_nearestGenHadTop_index;
     std::vector <double> v_hepTop_nearestGenLepTop_index;
-    
     std::vector <double> v_hepTop_genHadTop_deltaR_reco;
     std::vector <double> v_hepTop_genLepTop_deltaR_reco;
+    
+    std::vector <double> v_hepTop_nearestGenHadW_index;
+    std::vector <double> v_hepTop_nearestGenLepW_index;
+    std::vector <double> v_hepTop_genHadW_deltaR_reco;
+    std::vector <double> v_hepTop_genLepW_deltaR_reco;
+    
+    std::vector <double> v_hepTop_nearestGenHadZ_index;
+    std::vector <double> v_hepTop_nearestGenLepZ_index;
+    std::vector <double> v_hepTop_genHadZ_deltaR_reco;
+    std::vector <double> v_hepTop_genLepZ_deltaR_reco;
     
     std::vector <double> v_hepTop_nGenTopConstiMatched_reco;
     
     std::vector <double> v_hepTop_isMayBeTop_reco;
     std::vector <double> v_hepTop_isTagged_reco;
+    
+    
+    
     
     int hepTop_tauN_max;
     std::vector <std::vector <double> > vv_hepTop_tauN_reco;
@@ -393,6 +511,7 @@ class OutputInfo
         tree->Branch("hadTop_px_truth", &v_hadTop_px_truth);
         tree->Branch("hadTop_py_truth", &v_hadTop_py_truth);
         tree->Branch("hadTop_pz_truth", &v_hadTop_pz_truth);
+        tree->Branch("hadTop_pid_truth", &v_hadTop_pid_truth);
         
         
         tree->Branch("hadTopB_n_truth", &hadTopB_n_truth);
@@ -412,10 +531,23 @@ class OutputInfo
         tree->Branch("hadTopW_pT_truth", &v_hadTopW_pT_truth);
         tree->Branch("hadTopW_eta_truth", &v_hadTopW_eta_truth);
         tree->Branch("hadTopW_phi_truth", &v_hadTopW_phi_truth);
+        tree->Branch("hadTopW_m_truth", &v_hadTopW_m_truth);
         tree->Branch("hadTopW_E_truth", &v_hadTopW_E_truth);
         tree->Branch("hadTopW_px_truth", &v_hadTopW_px_truth);
         tree->Branch("hadTopW_py_truth", &v_hadTopW_py_truth);
         tree->Branch("hadTopW_pz_truth", &v_hadTopW_pz_truth);
+        
+        
+        tree->Branch("hadW_n_truth", &hadW_n_truth);
+        tree->Branch("hadW_pT_truth", &v_hadW_pT_truth);
+        tree->Branch("hadW_eta_truth", &v_hadW_eta_truth);
+        tree->Branch("hadW_phi_truth", &v_hadW_phi_truth);
+        tree->Branch("hadW_m_truth", &v_hadW_m_truth);
+        tree->Branch("hadW_E_truth", &v_hadW_E_truth);
+        tree->Branch("hadW_px_truth", &v_hadW_px_truth);
+        tree->Branch("hadW_py_truth", &v_hadW_py_truth);
+        tree->Branch("hadW_pz_truth", &v_hadW_pz_truth);
+        tree->Branch("hadW_pid_truth", &v_hadW_pid_truth);
         
         
         tree->Branch("Wq1_pT_truth", &v_Wq1_pT_truth);
@@ -456,6 +588,7 @@ class OutputInfo
         tree->Branch("lepTop_px_truth", &v_lepTop_px_truth);
         tree->Branch("lepTop_py_truth", &v_lepTop_py_truth);
         tree->Branch("lepTop_pz_truth", &v_lepTop_pz_truth);
+        tree->Branch("lepTop_pid_truth", &v_lepTop_pid_truth);
         
         tree->Branch("lepTopVis_pT_truth", &v_lepTopVis_pT_truth);
         tree->Branch("lepTopVis_eta_truth", &v_lepTopVis_eta_truth);
@@ -481,10 +614,23 @@ class OutputInfo
         tree->Branch("lepTopW_pT_truth", &v_lepTopW_pT_truth);
         tree->Branch("lepTopW_eta_truth", &v_lepTopW_eta_truth);
         tree->Branch("lepTopW_phi_truth", &v_lepTopW_phi_truth);
+        tree->Branch("lepTopW_m_truth", &v_lepTopW_m_truth);
         tree->Branch("lepTopW_E_truth", &v_lepTopW_E_truth);
         tree->Branch("lepTopW_px_truth", &v_lepTopW_px_truth);
         tree->Branch("lepTopW_py_truth", &v_lepTopW_py_truth);
         tree->Branch("lepTopW_pz_truth", &v_lepTopW_pz_truth);
+        
+        
+        tree->Branch("lepW_n_truth", &lepW_n_truth);
+        tree->Branch("lepW_pT_truth", &v_lepW_pT_truth);
+        tree->Branch("lepW_eta_truth", &v_lepW_eta_truth);
+        tree->Branch("lepW_phi_truth", &v_lepW_phi_truth);
+        tree->Branch("lepW_m_truth", &v_lepW_m_truth);
+        tree->Branch("lepW_E_truth", &v_lepW_E_truth);
+        tree->Branch("lepW_px_truth", &v_lepW_px_truth);
+        tree->Branch("lepW_py_truth", &v_lepW_py_truth);
+        tree->Branch("lepW_pz_truth", &v_lepW_pz_truth);
+        tree->Branch("lepW_pid_truth", &v_lepW_pid_truth);
         
         
         tree->Branch("Wlep_pT_truth", &v_Wlep_pT_truth);
@@ -522,6 +668,68 @@ class OutputInfo
         tree->Branch("b_px_truth", &v_b_px_truth);
         tree->Branch("b_py_truth", &v_b_py_truth);
         tree->Branch("b_pz_truth", &v_b_pz_truth);
+        
+        
+        // Hadronic Z
+        tree->Branch("hadZ_n_truth", &hadZ_n_truth);
+        tree->Branch("hadZ_pT_truth", &v_hadZ_pT_truth);
+        tree->Branch("hadZ_eta_truth", &v_hadZ_eta_truth);
+        tree->Branch("hadZ_phi_truth", &v_hadZ_phi_truth);
+        tree->Branch("hadZ_m_truth", &v_hadZ_m_truth);
+        tree->Branch("hadZ_E_truth", &v_hadZ_E_truth);
+        tree->Branch("hadZ_px_truth", &v_hadZ_px_truth);
+        tree->Branch("hadZ_py_truth", &v_hadZ_py_truth);
+        tree->Branch("hadZ_pz_truth", &v_hadZ_pz_truth);
+        
+        tree->Branch("Zq1_pT_truth", &v_Zq1_pT_truth);
+        tree->Branch("Zq1_eta_truth", &v_Zq1_eta_truth);
+        tree->Branch("Zq1_phi_truth", &v_Zq1_phi_truth);
+        tree->Branch("Zq1_E_truth", &v_Zq1_E_truth);
+        tree->Branch("Zq1_px_truth", &v_Zq1_px_truth);
+        tree->Branch("Zq1_py_truth", &v_Zq1_py_truth);
+        tree->Branch("Zq1_pz_truth", &v_Zq1_pz_truth);
+        tree->Branch("Zq1_pid_truth", &v_Zq1_pid_truth);
+        tree->Branch("Zq1_Zq2deltaR_truth", &v_Zq1_Zq2deltaR_truth);
+        
+        tree->Branch("Zq2_pT_truth", &v_Zq2_pT_truth);
+        tree->Branch("Zq2_eta_truth", &v_Zq2_eta_truth);
+        tree->Branch("Zq2_phi_truth", &v_Zq2_phi_truth);
+        tree->Branch("Zq2_E_truth", &v_Zq2_E_truth);
+        tree->Branch("Zq2_px_truth", &v_Zq2_px_truth);
+        tree->Branch("Zq2_py_truth", &v_Zq2_py_truth);
+        tree->Branch("Zq2_pz_truth", &v_Zq2_pz_truth);
+        tree->Branch("Zq2_pid_truth", &v_Zq2_pid_truth);
+        
+        
+        // Leptonic Z
+        tree->Branch("lepZ_n_truth", &lepZ_n_truth);
+        tree->Branch("lepZ_pT_truth", &v_lepZ_pT_truth);
+        tree->Branch("lepZ_eta_truth", &v_lepZ_eta_truth);
+        tree->Branch("lepZ_phi_truth", &v_lepZ_phi_truth);
+        tree->Branch("lepZ_m_truth", &v_lepZ_m_truth);
+        tree->Branch("lepZ_E_truth", &v_lepZ_E_truth);
+        tree->Branch("lepZ_px_truth", &v_lepZ_px_truth);
+        tree->Branch("lepZ_py_truth", &v_lepZ_py_truth);
+        tree->Branch("lepZ_pz_truth", &v_lepZ_pz_truth);
+        
+        tree->Branch("Zlep1_pT_truth", &v_Zlep1_pT_truth);
+        tree->Branch("Zlep1_eta_truth", &v_Zlep1_eta_truth);
+        tree->Branch("Zlep1_phi_truth", &v_Zlep1_phi_truth);
+        tree->Branch("Zlep1_E_truth", &v_Zlep1_E_truth);
+        tree->Branch("Zlep1_px_truth", &v_Zlep1_px_truth);
+        tree->Branch("Zlep1_py_truth", &v_Zlep1_py_truth);
+        tree->Branch("Zlep1_pz_truth", &v_Zlep1_pz_truth);
+        tree->Branch("Zlep1_pid_truth", &v_Zlep1_pid_truth);
+        tree->Branch("Zlep1_Zlep2deltaR_truth", &v_Zlep1_Zlep2deltaR_truth);
+        
+        tree->Branch("Zlep2_pT_truth", &v_Zlep2_pT_truth);
+        tree->Branch("Zlep2_eta_truth", &v_Zlep2_eta_truth);
+        tree->Branch("Zlep2_phi_truth", &v_Zlep2_phi_truth);
+        tree->Branch("Zlep2_E_truth", &v_Zlep2_E_truth);
+        tree->Branch("Zlep2_px_truth", &v_Zlep2_px_truth);
+        tree->Branch("Zlep2_py_truth", &v_Zlep2_py_truth);
+        tree->Branch("Zlep2_pz_truth", &v_Zlep2_pz_truth);
+        tree->Branch("Zlep2_pid_truth", &v_Zlep2_pid_truth);
         
         
         //
@@ -583,9 +791,18 @@ class OutputInfo
         
         tree->Branch("hepTop_nearestGenHadTop_index", &v_hepTop_nearestGenHadTop_index);
         tree->Branch("hepTop_nearestGenLepTop_index", &v_hepTop_nearestGenLepTop_index);
-        
         tree->Branch("hepTop_genHadTop_deltaR_reco", &v_hepTop_genHadTop_deltaR_reco);
         tree->Branch("hepTop_genLepTop_deltaR_reco", &v_hepTop_genLepTop_deltaR_reco);
+        
+        tree->Branch("hepTop_nearestGenHadW_index", &v_hepTop_nearestGenHadW_index);
+        tree->Branch("hepTop_nearestGenLepW_index", &v_hepTop_nearestGenLepW_index);
+        tree->Branch("hepTop_genHadW_deltaR_reco", &v_hepTop_genHadW_deltaR_reco);
+        tree->Branch("hepTop_genLepW_deltaR_reco", &v_hepTop_genLepW_deltaR_reco);
+        
+        tree->Branch("hepTop_nearestGenHadZ_index", &v_hepTop_nearestGenHadZ_index);
+        tree->Branch("hepTop_nearestGenLepZ_index", &v_hepTop_nearestGenLepZ_index);
+        tree->Branch("hepTop_genHadZ_deltaR_reco", &v_hepTop_genHadZ_deltaR_reco);
+        tree->Branch("hepTop_genLepZ_deltaR_reco", &v_hepTop_genLepZ_deltaR_reco);
         
         tree->Branch("hepTop_nGenTopConstiMatched_reco", &v_hepTop_nGenTopConstiMatched_reco);
         
@@ -663,6 +880,7 @@ class OutputInfo
         v_hadTop_px_truth.clear();
         v_hadTop_py_truth.clear();
         v_hadTop_pz_truth.clear();
+        v_hadTop_pid_truth.clear();
         
         hadTopB_n_truth = 0;
         v_hadTopB_pT_truth.clear();
@@ -680,10 +898,22 @@ class OutputInfo
         v_hadTopW_pT_truth.clear();
         v_hadTopW_eta_truth.clear();
         v_hadTopW_phi_truth.clear();
+        v_hadTopW_m_truth.clear();
         v_hadTopW_E_truth.clear();
         v_hadTopW_px_truth.clear();
         v_hadTopW_py_truth.clear();
         v_hadTopW_pz_truth.clear();
+        
+        hadW_n_truth = 0;
+        v_hadW_pT_truth.clear();
+        v_hadW_eta_truth.clear();
+        v_hadW_phi_truth.clear();
+        v_hadW_m_truth.clear();
+        v_hadW_E_truth.clear();
+        v_hadW_px_truth.clear();
+        v_hadW_py_truth.clear();
+        v_hadW_pz_truth.clear();
+        v_hadW_pid_truth.clear();
         
         v_Wq1_pT_truth.clear();
         v_Wq1_eta_truth.clear();
@@ -721,6 +951,7 @@ class OutputInfo
         v_lepTop_px_truth.clear();
         v_lepTop_py_truth.clear();
         v_lepTop_pz_truth.clear();
+        v_lepTop_pid_truth.clear();
         
         v_lepTopVis_pT_truth.clear();
         v_lepTopVis_eta_truth.clear();
@@ -744,10 +975,22 @@ class OutputInfo
         v_lepTopW_pT_truth.clear();
         v_lepTopW_eta_truth.clear();
         v_lepTopW_phi_truth.clear();
+        v_lepTopW_m_truth.clear();
         v_lepTopW_E_truth.clear();
         v_lepTopW_px_truth.clear();
         v_lepTopW_py_truth.clear();
         v_lepTopW_pz_truth.clear();
+        
+        lepW_n_truth = 0;
+        v_lepW_pT_truth.clear();
+        v_lepW_eta_truth.clear();
+        v_lepW_phi_truth.clear();
+        v_lepW_m_truth.clear();
+        v_lepW_E_truth.clear();
+        v_lepW_px_truth.clear();
+        v_lepW_py_truth.clear();
+        v_lepW_pz_truth.clear();
+        v_lepW_pid_truth.clear();
         
         v_Wlep_pT_truth.clear();
         v_Wlep_eta_truth.clear();
@@ -785,6 +1028,76 @@ class OutputInfo
         v_b_px_truth.clear();
         v_b_py_truth.clear();
         v_b_pz_truth.clear();
+        
+        
+        // Hadronic Z
+        hadZ_n_truth = 0;
+        v_hadZ_pT_truth.clear();
+        v_hadZ_eta_truth.clear();
+        v_hadZ_phi_truth.clear();
+        v_hadZ_m_truth.clear();
+        v_hadZ_E_truth.clear();
+        v_hadZ_px_truth.clear();
+        v_hadZ_py_truth.clear();
+        v_hadZ_pz_truth.clear();
+        
+        
+        // Hadronic Z q1
+        v_Zq1_pT_truth.clear();
+        v_Zq1_eta_truth.clear();
+        v_Zq1_phi_truth.clear();
+        v_Zq1_E_truth.clear();
+        v_Zq1_px_truth.clear();
+        v_Zq1_py_truth.clear();
+        v_Zq1_pz_truth.clear();
+        v_Zq1_pid_truth.clear();
+        v_Zq1_Zq2deltaR_truth.clear();
+        
+        
+        // Hadronic Z q2
+        v_Zq2_pT_truth.clear();
+        v_Zq2_eta_truth.clear();
+        v_Zq2_phi_truth.clear();
+        v_Zq2_E_truth.clear();
+        v_Zq2_px_truth.clear();
+        v_Zq2_py_truth.clear();
+        v_Zq2_pz_truth.clear();
+        v_Zq2_pid_truth.clear();
+        
+        
+        // Leptonic Z
+        lepZ_n_truth = 0;
+        v_lepZ_pT_truth.clear();
+        v_lepZ_eta_truth.clear();
+        v_lepZ_phi_truth.clear();
+        v_lepZ_m_truth.clear();
+        v_lepZ_E_truth.clear();
+        v_lepZ_px_truth.clear();
+        v_lepZ_py_truth.clear();
+        v_lepZ_pz_truth.clear();
+        
+        
+        // Hadronic Z q1
+        v_Zlep1_pT_truth.clear();
+        v_Zlep1_eta_truth.clear();
+        v_Zlep1_phi_truth.clear();
+        v_Zlep1_E_truth.clear();
+        v_Zlep1_px_truth.clear();
+        v_Zlep1_py_truth.clear();
+        v_Zlep1_pz_truth.clear();
+        v_Zlep1_pid_truth.clear();
+        v_Zlep1_Zlep2deltaR_truth.clear();
+        
+        
+        // Hadronic Z q2
+        v_Zlep2_pT_truth.clear();
+        v_Zlep2_eta_truth.clear();
+        v_Zlep2_phi_truth.clear();
+        v_Zlep2_E_truth.clear();
+        v_Zlep2_px_truth.clear();
+        v_Zlep2_py_truth.clear();
+        v_Zlep2_pz_truth.clear();
+        v_Zlep2_pid_truth.clear();
         
         
         //
@@ -846,9 +1159,18 @@ class OutputInfo
         
         v_hepTop_nearestGenHadTop_index.clear();
         v_hepTop_nearestGenLepTop_index.clear();
-        
         v_hepTop_genHadTop_deltaR_reco.clear();
         v_hepTop_genLepTop_deltaR_reco.clear();
+        
+        v_hepTop_nearestGenHadW_index.clear();
+        v_hepTop_nearestGenLepW_index.clear();
+        v_hepTop_genHadW_deltaR_reco.clear();
+        v_hepTop_genLepW_deltaR_reco.clear();
+        
+        v_hepTop_nearestGenHadZ_index.clear();
+        v_hepTop_nearestGenLepZ_index.clear();
+        v_hepTop_genHadZ_deltaR_reco.clear();
+        v_hepTop_genLepZ_deltaR_reco.clear();
         
         v_hepTop_nGenTopConstiMatched_reco.clear();
         
@@ -983,7 +1305,7 @@ GenParticle* getLastCopy(TClonesArray *br_Particle, GenParticle* genParticle)
 }
 
 
-bool isHadronicTop(TClonesArray *br_Particle, GenParticle *genParticle)
+bool isHadronicWZ(TClonesArray *br_Particle, GenParticle *genParticle)
 {
     genParticle = getLastCopy(br_Particle, genParticle);
     
@@ -995,7 +1317,7 @@ bool isHadronicTop(TClonesArray *br_Particle, GenParticle *genParticle)
     GenParticle *daughter1 = 0;
     GenParticle *daughter2 = 0;
     
-    if(daughter1_index >= 0 )
+    if(daughter1_index >= 0)
     {
         daughter1 = (GenParticle*) br_Particle->At(daughter1_index);
     }
@@ -1005,17 +1327,12 @@ bool isHadronicTop(TClonesArray *br_Particle, GenParticle *genParticle)
         daughter2 = (GenParticle*) br_Particle->At(daughter2_index);
     }
     
-    // Recurse if daughter is a W
-    if(daughter1 && abs(daughter1->PID) == 24)
+    if(!daughter1 || !daughter2)
     {
-        return isHadronicTop(br_Particle, daughter1);
+        printf("Error in isHadronicWZ(...): Invalid daughter(s) encountered. \n");
+        printf("Exiting... \n");
+        exit(EXIT_FAILURE);
     }
-    
-    else if(daughter2 && abs(daughter2->PID) == 24)
-    {
-        return isHadronicTop(br_Particle, daughter2);
-    }
-    
     
     bool isHadronic = true;
     
@@ -1029,6 +1346,52 @@ bool isHadronicTop(TClonesArray *br_Particle, GenParticle *genParticle)
     }
     
     return isHadronic;
+}
+
+
+bool isHadronicTop(TClonesArray *br_Particle, GenParticle *genParticle)
+{
+    genParticle = getLastCopy(br_Particle, genParticle);
+    
+    int id = genParticle->PID;
+    int status = genParticle->Status;
+    int daughter1_index = genParticle->D1;
+    int daughter2_index = genParticle->D2;
+    
+    GenParticle *daughter1 = 0;
+    GenParticle *daughter2 = 0;
+    
+    if(daughter1_index >= 0)
+    {
+        daughter1 = (GenParticle*) br_Particle->At(daughter1_index);
+    }
+    
+    if(daughter2_index >= 0)
+    {
+        daughter2 = (GenParticle*) br_Particle->At(daughter2_index);
+    }
+    
+    GenParticle *daughterW = 0;
+    
+    // Recurse if daughter is a W
+    if(daughter1 && abs(daughter1->PID) == 24)
+    {
+        daughterW = daughter1;
+    }
+    
+    else if(daughter2 && abs(daughter2->PID) == 24)
+    {
+        daughterW = daughter2;
+    }
+    
+    if(!daughterW)
+    {
+        printf("Error in isHadronicTop(...): Could not find any daughter. \n");
+        printf("Exiting... \n");
+        exit(EXIT_FAILURE);
+    }
+    
+    return isHadronicWZ(br_Particle, daughterW);
 }
 
 
@@ -2089,6 +2452,12 @@ int main(int nArg, char** v_runArg)
         std::vector <int> v_genTop_isHadronic;
         std::vector <CLHEP::HepLorentzVector> v_genTopVis_4mom;
         
+        std::vector <CLHEP::HepLorentzVector> v_genHadW_4mom;
+        std::vector <CLHEP::HepLorentzVector> v_genLepWvis_4mom;
+        
+        std::vector <CLHEP::HepLorentzVector> v_genHadZ_4mom;
+        std::vector <CLHEP::HepLorentzVector> v_genLepZ_4mom;
+        
         std::vector <std::vector <CLHEP::HepLorentzVector> > vv_genTop_consti_4mom;
         
         GenParticle *genHadTop = 0;
@@ -2315,6 +2684,7 @@ int main(int nArg, char** v_runArg)
                             outputInfo->v_hadTop_px_truth.push_back(genTop->Px);
                             outputInfo->v_hadTop_py_truth.push_back(genTop->Py);
                             outputInfo->v_hadTop_pz_truth.push_back(genTop->Pz);
+                            outputInfo->v_hadTop_pid_truth.push_back(id);
                             
                             outputInfo->v_hadTopB_pT_truth.push_back(genB->PT);
                             outputInfo->v_hadTopB_eta_truth.push_back(genB->Eta);
@@ -2330,6 +2700,7 @@ int main(int nArg, char** v_runArg)
                             outputInfo->v_hadTopW_pT_truth.push_back(genW->PT);
                             outputInfo->v_hadTopW_eta_truth.push_back(genW->Eta);
                             outputInfo->v_hadTopW_phi_truth.push_back(genW->Phi);
+                            outputInfo->v_hadTopW_m_truth.push_back(genW->Mass);
                             outputInfo->v_hadTopW_E_truth.push_back(genW->E);
                             outputInfo->v_hadTopW_px_truth.push_back(genW->Px);
                             outputInfo->v_hadTopW_py_truth.push_back(genW->Py);
@@ -2418,6 +2789,7 @@ int main(int nArg, char** v_runArg)
                             outputInfo->v_lepTop_px_truth.push_back(genTop->Px);
                             outputInfo->v_lepTop_py_truth.push_back(genTop->Py);
                             outputInfo->v_lepTop_pz_truth.push_back(genTop->Pz);
+                            outputInfo->v_lepTop_pid_truth.push_back(id);
                             
                             outputInfo->v_lepTopB_pT_truth.push_back(genB->PT);
                             outputInfo->v_lepTopB_eta_truth.push_back(genB->Eta);
@@ -2432,6 +2804,7 @@ int main(int nArg, char** v_runArg)
                             outputInfo->v_lepTopW_pT_truth.push_back(genW->PT);
                             outputInfo->v_lepTopW_eta_truth.push_back(genW->Eta);
                             outputInfo->v_lepTopW_phi_truth.push_back(genW->Phi);
+                            outputInfo->v_lepTopW_m_truth.push_back(genW->Mass);
                             outputInfo->v_lepTopW_E_truth.push_back(genW->E);
                             outputInfo->v_lepTopW_px_truth.push_back(genW->Px);
                             outputInfo->v_lepTopW_py_truth.push_back(genW->Py);
@@ -2482,6 +2855,110 @@ int main(int nArg, char** v_runArg)
                 }
             }
             
+            
+            // Gen W
+            if(abs(id) == 24)
+            {
+                //printf("[%d/%d] W: id +%d, status %d \n", iEvent, nEvent, id, status);
+                
+                if(status == 22 && genParticle->PT > _W_pTcut && fabs(genParticle->Eta) < _W_etaCut)
+                {
+                    //printf("[%d/%d] W: id +%d, status %d \n", iEvent, nEvent, id, status);
+                    
+                    GenParticle *genW = getLastCopy(br_Particle, genParticle);
+                    genW = getLastCopy(br_Particle, genW);
+                    
+                    CLHEP::HepLorentzVector genW_4mom = delphesObjToHepLorentzVector(genW);
+                    
+                    bool isHadronic = isHadronicWZ(br_Particle, genW);
+                    
+                    if(isHadronic)
+                    {
+                        outputInfo->hadW_n_truth++;
+                        
+                        outputInfo->v_hadW_pT_truth.push_back(genW->PT);
+                        outputInfo->v_hadW_eta_truth.push_back(genW->Eta);
+                        outputInfo->v_hadW_phi_truth.push_back(genW->Phi);
+                        outputInfo->v_hadW_m_truth.push_back(genW->Mass);
+                        outputInfo->v_hadW_E_truth.push_back(genW->E);
+                        outputInfo->v_hadW_px_truth.push_back(genW->Px);
+                        outputInfo->v_hadW_py_truth.push_back(genW->Py);
+                        outputInfo->v_hadW_pz_truth.push_back(genW->Pz);
+                        outputInfo->v_hadW_pid_truth.push_back(id);
+                        
+                        GenParticle *genWq1 = (GenParticle*) br_Particle->At(genW->D1);
+                        GenParticle *genWq2 = (GenParticle*) br_Particle->At(genW->D2);
+                        
+                        GenParticle *temp;
+                        
+                        if(genWq1->PT < genWq2->PT)
+                        {
+                            temp = genWq1;
+                            genWq1 = genWq2;
+                            genWq2 = temp;
+                        }
+                        
+                        outputInfo->v_Wq1_pT_truth.push_back(genWq1->PT);
+                        outputInfo->v_Wq1_eta_truth.push_back(genWq1->Eta);
+                        outputInfo->v_Wq1_phi_truth.push_back(genWq1->Phi);
+                        outputInfo->v_Wq1_E_truth.push_back(genWq1->E);
+                        outputInfo->v_Wq1_px_truth.push_back(genWq1->Px);
+                        outputInfo->v_Wq1_py_truth.push_back(genWq1->Py);
+                        outputInfo->v_Wq1_pz_truth.push_back(genWq1->Pz);
+                        outputInfo->v_Wq1_pid_truth.push_back(genWq1->PID);
+                        outputInfo->v_Wq1_Wq2deltaR_truth.push_back(getRapidityDeltaR(genWq1->P4(), genWq2->P4()));
+                        
+                        outputInfo->v_Wq2_pT_truth.push_back(genWq2->PT);
+                        outputInfo->v_Wq2_eta_truth.push_back(genWq2->Eta);
+                        outputInfo->v_Wq2_phi_truth.push_back(genWq2->Phi);
+                        outputInfo->v_Wq2_E_truth.push_back(genWq2->E);
+                        outputInfo->v_Wq2_px_truth.push_back(genWq2->Px);
+                        outputInfo->v_Wq2_py_truth.push_back(genWq2->Py);
+                        outputInfo->v_Wq2_pz_truth.push_back(genWq2->Pz);
+                        outputInfo->v_Wq2_pid_truth.push_back(genWq2->PID);
+                        
+                        
+                        v_genHadW_4mom.push_back(genW_4mom);
+                    }
+                    
+                    else
+                    {
+                        outputInfo->lepW_n_truth++;
+                        
+                        outputInfo->v_lepW_pT_truth.push_back(genW->PT);
+                        outputInfo->v_lepW_eta_truth.push_back(genW->Eta);
+                        outputInfo->v_lepW_phi_truth.push_back(genW->Phi);
+                        outputInfo->v_lepW_m_truth.push_back(genW->Mass);
+                        outputInfo->v_lepW_E_truth.push_back(genW->E);
+                        outputInfo->v_lepW_px_truth.push_back(genW->Px);
+                        outputInfo->v_lepW_py_truth.push_back(genW->Py);
+                        outputInfo->v_lepW_pz_truth.push_back(genW->Pz);
+                        outputInfo->v_lepW_pid_truth.push_back(id);
+                        
+                        GenParticle *genWlep = (GenParticle*) br_Particle->At(genW->D1);
+                        
+                        // Select the other daughter if the current one isn't a lepton
+                        if(abs(genWlep->PID) != 11 && abs(genWlep->PID) != 13 && abs(genWlep->PID) != 15)
+                        {
+                            genWlep = (GenParticle*) br_Particle->At(genW->D2);
+                        }
+                        
+                        outputInfo->v_Wlep_pT_truth.push_back(genWlep->PT);
+                        outputInfo->v_Wlep_eta_truth.push_back(genWlep->Eta);
+                        outputInfo->v_Wlep_phi_truth.push_back(genWlep->Phi);
+                        outputInfo->v_Wlep_E_truth.push_back(genWlep->E);
+                        outputInfo->v_Wlep_px_truth.push_back(genWlep->Px);
+                        outputInfo->v_Wlep_py_truth.push_back(genWlep->Py);
+                        outputInfo->v_Wlep_pz_truth.push_back(genWlep->Pz);
+                        outputInfo->v_Wlep_pid_truth.push_back(genWlep->PID);
+                        
+                        
+                        v_genLepWvis_4mom.push_back(delphesObjToHepLorentzVector(genWlep));
+                    }
+                }
+            }
+            
+            
             // Gen lepton from W
             if(abs(id) == 24 && daughter1 && daughter2)
             {
@@ -2497,6 +2974,122 @@ int main(int nArg, char** v_runArg)
                     v_genLepFromW_index.push_back(daughter2_index);
                 }
             }
+            
+            
+            // Gen Z
+            if(abs(id) == 23 && genParticle->PT > _Z_pTcut && fabs(genParticle->Eta) < _Z_etaCut)
+            {
+                //printf("[%d/%d] Z: id +%d, status %d \n", iEvent, nEvent, id, status);
+                
+                if(status == 22)
+                {
+                    //printf("[%d/%d] Z: id %+d, status %d \n", iEvent, nEvent, id, status);
+                    
+                    GenParticle *genZ = getLastCopy(br_Particle, genParticle);
+                    genZ = getLastCopy(br_Particle, genZ);
+                    
+                    CLHEP::HepLorentzVector genZ_4mom = delphesObjToHepLorentzVector(genZ);
+                    
+                    bool isHadronic = isHadronicWZ(br_Particle, genZ);
+                    
+                    if(isHadronic)
+                    {
+                        outputInfo->hadZ_n_truth++;
+                        
+                        outputInfo->v_hadZ_pT_truth.push_back(genZ->PT);
+                        outputInfo->v_hadZ_eta_truth.push_back(genZ->Eta);
+                        outputInfo->v_hadZ_phi_truth.push_back(genZ->Phi);
+                        outputInfo->v_hadZ_m_truth.push_back(genZ->Mass);
+                        outputInfo->v_hadZ_E_truth.push_back(genZ->E);
+                        outputInfo->v_hadZ_px_truth.push_back(genZ->Px);
+                        outputInfo->v_hadZ_py_truth.push_back(genZ->Py);
+                        outputInfo->v_hadZ_pz_truth.push_back(genZ->Pz);
+                        
+                        GenParticle *genZq1 = (GenParticle*) br_Particle->At(genZ->D1);
+                        GenParticle *genZq2 = (GenParticle*) br_Particle->At(genZ->D2);
+                        
+                        GenParticle *temp;
+                        
+                        if(genZq1->PT < genZq2->PT)
+                        {
+                            temp = genZq1;
+                            genZq1 = genZq2;
+                            genZq2 = temp;
+                        }
+                        
+                        outputInfo->v_Zq1_pT_truth.push_back(genZq1->PT);
+                        outputInfo->v_Zq1_eta_truth.push_back(genZq1->Eta);
+                        outputInfo->v_Zq1_phi_truth.push_back(genZq1->Phi);
+                        outputInfo->v_Zq1_E_truth.push_back(genZq1->E);
+                        outputInfo->v_Zq1_px_truth.push_back(genZq1->Px);
+                        outputInfo->v_Zq1_py_truth.push_back(genZq1->Py);
+                        outputInfo->v_Zq1_pz_truth.push_back(genZq1->Pz);
+                        outputInfo->v_Zq1_pid_truth.push_back(genZq1->PID);
+                        outputInfo->v_Zq1_Zq2deltaR_truth.push_back(getRapidityDeltaR(genZq1->P4(), genZq2->P4()));
+                        
+                        outputInfo->v_Zq2_pT_truth.push_back(genZq2->PT);
+                        outputInfo->v_Zq2_eta_truth.push_back(genZq2->Eta);
+                        outputInfo->v_Zq2_phi_truth.push_back(genZq2->Phi);
+                        outputInfo->v_Zq2_E_truth.push_back(genZq2->E);
+                        outputInfo->v_Zq2_px_truth.push_back(genZq2->Px);
+                        outputInfo->v_Zq2_py_truth.push_back(genZq2->Py);
+                        outputInfo->v_Zq2_pz_truth.push_back(genZq2->Pz);
+                        outputInfo->v_Zq2_pid_truth.push_back(genZq2->PID);
+                        
+                        
+                        v_genHadZ_4mom.push_back(genZ_4mom);
+                    }
+                    
+                    else
+                    {
+                        outputInfo->lepZ_n_truth++;
+                        
+                        outputInfo->v_lepZ_pT_truth.push_back(genZ->PT);
+                        outputInfo->v_lepZ_eta_truth.push_back(genZ->Eta);
+                        outputInfo->v_lepZ_phi_truth.push_back(genZ->Phi);
+                        outputInfo->v_lepZ_m_truth.push_back(genZ->Mass);
+                        outputInfo->v_lepZ_E_truth.push_back(genZ->E);
+                        outputInfo->v_lepZ_px_truth.push_back(genZ->Px);
+                        outputInfo->v_lepZ_py_truth.push_back(genZ->Py);
+                        outputInfo->v_lepZ_pz_truth.push_back(genZ->Pz);
+                        
+                        GenParticle *genZlep1 = (GenParticle*) br_Particle->At(genZ->D1);
+                        GenParticle *genZlep2 = (GenParticle*) br_Particle->At(genZ->D2);
+                        
+                        GenParticle *temp;
+                        
+                        if(genZlep1->PT < genZlep2->PT)
+                        {
+                            temp = genZlep1;
+                            genZlep1 = genZlep2;
+                            genZlep2 = temp;
+                        }
+                        
+                        outputInfo->v_Zlep1_pT_truth.push_back(genZlep1->PT);
+                        outputInfo->v_Zlep1_eta_truth.push_back(genZlep1->Eta);
+                        outputInfo->v_Zlep1_phi_truth.push_back(genZlep1->Phi);
+                        outputInfo->v_Zlep1_E_truth.push_back(genZlep1->E);
+                        outputInfo->v_Zlep1_px_truth.push_back(genZlep1->Px);
+                        outputInfo->v_Zlep1_py_truth.push_back(genZlep1->Py);
+                        outputInfo->v_Zlep1_pz_truth.push_back(genZlep1->Pz);
+                        outputInfo->v_Zlep1_pid_truth.push_back(genZlep1->PID);
+                        outputInfo->v_Zlep1_Zlep2deltaR_truth.push_back(getRapidityDeltaR(genZlep1->P4(), genZlep2->P4()));
+                        
+                        outputInfo->v_Zlep2_pT_truth.push_back(genZlep2->PT);
+                        outputInfo->v_Zlep2_eta_truth.push_back(genZlep2->Eta);
+                        outputInfo->v_Zlep2_phi_truth.push_back(genZlep2->Phi);
+                        outputInfo->v_Zlep2_E_truth.push_back(genZlep2->E);
+                        outputInfo->v_Zlep2_px_truth.push_back(genZlep2->Px);
+                        outputInfo->v_Zlep2_py_truth.push_back(genZlep2->Py);
+                        outputInfo->v_Zlep2_pz_truth.push_back(genZlep2->Pz);
+                        outputInfo->v_Zlep2_pid_truth.push_back(genZlep2->PID);
+                        
+                        
+                        v_genLepZ_4mom.push_back(genZ_4mom);
+                    }
+                }
+            }
+            
             
             // Gen MET
             if(status == 1 && (abs(id) == 12 || abs(id) == 14 || abs(id) == 16 || abs(id) == 1000022))
@@ -2938,11 +3531,117 @@ int main(int nArg, char** v_runArg)
             
             outputInfo->v_hepTop_nearestGenHadTop_index.push_back(nearestGenHadTop_index);
             outputInfo->v_hepTop_nearestGenLepTop_index.push_back(nearestGenLepTop_index);
-            
             outputInfo->v_hepTop_genHadTop_deltaR_reco.push_back(genHadTop_deltaR_min);
             outputInfo->v_hepTop_genLepTop_deltaR_reco.push_back(genLepTop_deltaR_min);
             
             outputInfo->v_hepTop_nGenTopConstiMatched_reco.push_back(nGenTopConstiMatched);
+            
+            
+            // Match to had W
+            int nearestGenHadW_index = -1;
+            double genHadW_deltaR_min = 9999;
+            
+            if(v_genHadW_4mom.size())
+            {
+                TMatrixD mat_genWmatch;
+                
+                std::vector <double> v_genW_deltaR = getMinDeltaR(
+                    v_genHadW_4mom,
+                    {fatJet_4mom_reco},
+                    mat_genWmatch,
+                    true
+                );
+                
+                nearestGenHadW_index = std::distance(
+                    v_genW_deltaR.begin(),
+                    std::min_element(v_genW_deltaR.begin(), v_genW_deltaR.end())
+                );
+                
+                genHadW_deltaR_min = v_genW_deltaR.at(nearestGenHadW_index);
+            }
+            
+            // Match to lep W
+            int nearestGenLepW_index = -1;
+            double genLepW_deltaR_min = 9999;
+            
+            if(v_genLepWvis_4mom.size())
+            {
+                TMatrixD mat_genWmatch;
+                
+                std::vector <double> v_genW_deltaR = getMinDeltaR(
+                    v_genLepWvis_4mom,
+                    {fatJet_4mom_reco},
+                    mat_genWmatch,
+                    true
+                );
+                
+                nearestGenLepW_index = std::distance(
+                    v_genW_deltaR.begin(),
+                    std::min_element(v_genW_deltaR.begin(), v_genW_deltaR.end())
+                );
+                
+                genLepW_deltaR_min = v_genW_deltaR.at(nearestGenLepW_index);
+            }
+            
+            outputInfo->v_hepTop_nearestGenHadW_index.push_back(nearestGenHadW_index);
+            outputInfo->v_hepTop_nearestGenLepW_index.push_back(nearestGenLepW_index);
+            outputInfo->v_hepTop_genHadW_deltaR_reco.push_back(genHadW_deltaR_min);
+            outputInfo->v_hepTop_genLepW_deltaR_reco.push_back(genLepW_deltaR_min);
+            
+            
+            // Match to had Z
+            int nearestGenHadZ_index = -1;
+            double genHadZ_deltaR_min = 9999;
+            
+            if(v_genHadZ_4mom.size())
+            {
+                TMatrixD mat_genZmatch;
+                
+                std::vector <double> v_genZ_deltaR = getMinDeltaR(
+                    v_genHadZ_4mom,
+                    {fatJet_4mom_reco},
+                    mat_genZmatch,
+                    true
+                );
+                
+                nearestGenHadZ_index = std::distance(
+                    v_genZ_deltaR.begin(),
+                    std::min_element(v_genZ_deltaR.begin(), v_genZ_deltaR.end())
+                );
+                
+                genHadZ_deltaR_min = v_genZ_deltaR.at(nearestGenHadZ_index);
+            }
+            
+            // Match to lep Z
+            int nearestGenLepZ_index = -1;
+            double genLepZ_deltaR_min = 9999;
+            
+            if(v_genLepZ_4mom.size())
+            {
+                TMatrixD mat_genZmatch;
+                
+                std::vector <double> v_genZ_deltaR = getMinDeltaR(
+                    v_genLepZ_4mom,
+                    {fatJet_4mom_reco},
+                    mat_genZmatch,
+                    true
+                );
+                
+                nearestGenLepZ_index = std::distance(
+                    v_genZ_deltaR.begin(),
+                    std::min_element(v_genZ_deltaR.begin(), v_genZ_deltaR.end())
+                );
+                
+                genLepZ_deltaR_min = v_genZ_deltaR.at(nearestGenLepZ_index);
+            }
+            
+            outputInfo->v_hepTop_nearestGenHadZ_index.push_back(nearestGenHadZ_index);
+            outputInfo->v_hepTop_nearestGenLepZ_index.push_back(nearestGenLepZ_index);
+            outputInfo->v_hepTop_genHadZ_deltaR_reco.push_back(genHadZ_deltaR_min);
+            outputInfo->v_hepTop_genLepZ_deltaR_reco.push_back(genLepZ_deltaR_min);
+            
+            
+            
             
             outputInfo->v_hepTop_isMayBeTop_reco.push_back(tagger.is_maybe_top());
             outputInfo->v_hepTop_isTagged_reco.push_back(tagger_default.is_tagged());

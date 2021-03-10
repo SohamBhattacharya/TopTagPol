@@ -432,6 +432,551 @@ def cleanSpaces(string) :
 #l_job.append(job)
 
 
+# #############################################################################################
+# ######################################## W (had) ########################################
+# #############################################################################################
+#
+#cmdStr = """ \
+#    python -u plotJetImage.py \
+#    --nEventMax 500000 \
+#    --process "l_ntupleFile_W_had" \
+#    --plotStr "h2_hepTop_boosted_fracE_phiEtaPlane_reco" \
+#    --cutStr "hepTop_genHadW_deltaR_reco < 1 and hepTop_pT_reco > 200 and hepTop_nExcSubJet_reco >= 3" \
+#    --xTitle "Image x-coordinate" \
+#    --yTitle "Image y-coordinate" \
+#    --zTitle "Fraction of jet energy" \
+#    --xMin -1 \
+#    --xMax +1 \
+#    --yMin -1 \
+#    --yMax +1 \
+#    --zMin 1e-6 \
+#    --zMax 1e-1 \
+#    --logZ \
+#    --title "W^{had} jet image from WJets" \
+#    --outFileName "jetImage_hadW_boosted" \
+#"""
+#
+#cmdStr = cleanSpaces(cmdStr)
+#job = pool.apply_async(os.system, (), dict(command = cmdStr))
+#l_job.append(job)
+#
+#
+#cmdStr = """ \
+#    python -u plotJetImage.py \
+#    --nEventMax 500000 \
+#    --process "l_ntupleFile_W_had" \
+#    --plotStr "h2_hepTop_boosted_track_fracE_phiEtaPlane_reco" \
+#    --cutStr "hepTop_genHadW_deltaR_reco < 1 and hepTop_pT_reco > 200 and hepTop_nExcSubJet_reco >= 3" \
+#    --xTitle "Image x-coordinate" \
+#    --yTitle "Image y-coordinate" \
+#    --zTitle "Fraction of jet energy" \
+#    --xMin -1 \
+#    --xMax +1 \
+#    --yMin -1 \
+#    --yMax +1 \
+#    --zMin 1e-6 \
+#    --zMax 1e-1 \
+#    --logZ \
+#    --title "W^{had} jet image (tracks) from WJets" \
+#    --outFileName "jetImage_hadW_boosted_track" \
+#"""
+#
+#cmdStr = cleanSpaces(cmdStr)
+#job = pool.apply_async(os.system, (), dict(command = cmdStr))
+#l_job.append(job)
+#
+#
+#cmdStr = """ \
+#    python -u plotJetImage.py \
+#    --nEventMax 500000 \
+#    --process "l_ntupleFile_W_had" \
+#    --plotStr "h2_hepTop_boosted_photon_fracE_phiEtaPlane_reco" \
+#    --cutStr "hepTop_genHadW_deltaR_reco < 1 and hepTop_pT_reco > 200 and hepTop_nExcSubJet_reco >= 3" \
+#    --xTitle "Image x-coordinate" \
+#    --yTitle "Image y-coordinate" \
+#    --zTitle "Fraction of jet energy" \
+#    --xMin -1 \
+#    --xMax +1 \
+#    --yMin -1 \
+#    --yMax +1 \
+#    --zMin 1e-6 \
+#    --zMax 1e-1 \
+#    --logZ \
+#    --title "W^{had} jet image (photons) from WJets" \
+#    --outFileName "jetImage_hadW_boosted_photon" \
+#"""
+#
+#cmdStr = cleanSpaces(cmdStr)
+#job = pool.apply_async(os.system, (), dict(command = cmdStr))
+#l_job.append(job)
+#
+#
+#cmdStr = """ \
+#    python -u plotJetImage.py \
+#    --nEventMax 500000 \
+#    --process "l_ntupleFile_W_had" \
+#    --plotStr "h2_hepTop_boosted_neutralHad_fracE_phiEtaPlane_reco" \
+#    --cutStr "hepTop_genHadW_deltaR_reco < 1 and hepTop_pT_reco > 200 and hepTop_nExcSubJet_reco >= 3" \
+#    --xTitle "Image x-coordinate" \
+#    --yTitle "Image y-coordinate" \
+#    --zTitle "Fraction of jet energy" \
+#    --xMin -1 \
+#    --xMax +1 \
+#    --yMin -1 \
+#    --yMax +1 \
+#    --zMin 1e-6 \
+#    --zMax 1e-1 \
+#    --logZ \
+#    --title "W^{had} jet image (neutral hadrons) from WJets" \
+#    --outFileName "jetImage_hadW_boosted_neutralHad" \
+#"""
+#
+#cmdStr = cleanSpaces(cmdStr)
+#job = pool.apply_async(os.system, (), dict(command = cmdStr))
+#l_job.append(job)
+
+
+
+ #############################################################################################
+ ######################################## W (lep) ########################################
+ #############################################################################################
+
+#cmdStr = """ \
+#    python -u plotJetImage.py \
+#    --nEventMax 500000 \
+#    --process "l_ntupleFile_W_lep" \
+#    --plotStr "h2_hepTop_boosted_fracE_phiEtaPlane_reco" \
+#    --cutStr "hepTop_genLepW_deltaR_reco < 1 && hepTop_pT_reco > 200 && hepTop_nExcSubJet_reco >= 3" \
+#    --xTitle "Image x-coordinate" \
+#    --yTitle "Image y-coordinate" \
+#    --zTitle "Fraction of jet energy" \
+#    --xMin -1 \
+#    --xMax +1 \
+#    --yMin -1 \
+#    --yMax +1 \
+#    --zMin 1e-6 \
+#    --zMax 1e-1 \
+#    --logZ \
+#    --title "W^{lep} jet image from WJets" \
+#    --outFileName "jetImage_lepW_boosted" \
+#"""
+#
+#cmdStr = cleanSpaces(cmdStr)
+#job = pool.apply_async(os.system, (), dict(command = cmdStr))
+#l_job.append(job)
+
+
+#cmdStr = """ \
+#    python -u plotJetImage.py \
+#    --nEventMax 200000 \
+#    --process "l_ntupleFile_W_lep" \
+#    --plotStr "h2_hepTop_boosted_fracE_phiEtaPlane_reco" \
+#    --cutStr "hepTop_genLepW_deltaR_reco < 1 && hepTop_pT_reco > 200" \
+#    --xTitle "Image x-coordinate" \
+#    --yTitle "Image y-coordinate" \
+#    --zTitle "Fraction of jet energy" \
+#    --xMin -1 \
+#    --xMax +1 \
+#    --yMin -1 \
+#    --yMax +1 \
+#    --zMin 1e-6 \
+#    --zMax 1e-1 \
+#    --logZ \
+#    --title "W^{lep} jet image from WJets (n_{excl. subjet} #geq 1)" \
+#    --outFileName "jetImage_lepW_boosted_no-nExcSubJet-cut" \
+#"""
+#
+#cmdStr = cleanSpaces(cmdStr)
+#job = pool.apply_async(os.system, (), dict(command = cmdStr))
+#l_job.append(job)
+#
+
+#cmdStr = """ \
+#    python -u plotJetImage.py \
+#    --nEventMax 100000 \
+#    --process "l_ntupleFile_W_lep" \
+#    --plotStr "h2_hepTop_boosted_fracE_phiEtaPlane_reco" \
+#    --cutStr "hepTop_genLepW_deltaR_reco < 1 && hepTop_pT_reco > 200 && hepTop_nExcSubJet_reco >= 3 && hepTop_nearestGenLepW_index >= 0 && Wlep_pT_truth[hepTop_nearestGenLepW_index] > 300" \
+#    --xTitle "Image x-coordinate" \
+#    --yTitle "Image y-coordinate" \
+#    --zTitle "Fraction of jet energy" \
+#    --xMin -1 \
+#    --xMax +1 \
+#    --yMin -1 \
+#    --yMax +1 \
+#    --zMin 1e-6 \
+#    --zMax 1e-1 \
+#    --logZ \
+#    --title "W^{lep} jet image from WJets (p^{lep}_{T, gen} > 300 GeV)" \
+#    --outFileName "jetImage_lepW_boosted_genWlep-pT-gt-300" \
+#"""
+#
+#cmdStr = cleanSpaces(cmdStr)
+#job = pool.apply_async(os.system, (), dict(command = cmdStr))
+#l_job.append(job)
+#
+#
+#cmdStr = """ \
+#    python -u plotJetImage.py \
+#    --nEventMax 100000 \
+#    --process "l_ntupleFile_W_lep" \
+#    --plotStr "h2_hepTop_boosted_fracE_phiEtaPlane_reco" \
+#    --cutStr "hepTop_genLepW_deltaR_reco < 1 && hepTop_pT_reco > 200 && hepTop_nExcSubJet_reco >= 3 && hepTop_nearestGenLepW_index >= 0 && Wlep_pT_truth[hepTop_nearestGenLepW_index] < 300" \
+#    --xTitle "Image x-coordinate" \
+#    --yTitle "Image y-coordinate" \
+#    --zTitle "Fraction of jet energy" \
+#    --xMin -1 \
+#    --xMax +1 \
+#    --yMin -1 \
+#    --yMax +1 \
+#    --zMin 1e-6 \
+#    --zMax 1e-1 \
+#    --logZ \
+#    --title "W^{lep} jet image from WJets (p^{lep}_{T, gen} < 300 GeV)" \
+#    --outFileName "jetImage_lepW_boosted_genWlep-pT-lt-300" \
+#"""
+#
+#cmdStr = cleanSpaces(cmdStr)
+#job = pool.apply_async(os.system, (), dict(command = cmdStr))
+#l_job.append(job)
+#
+#
+#cmdStr = """ \
+#    python -u plotJetImage.py \
+#    --nEventMax 100000 \
+#    --process "l_ntupleFile_W_lep" \
+#    --plotStr "h2_hepTop_boosted_fracE_phiEtaPlane_reco" \
+#    --cutStr "hepTop_genLepW_deltaR_reco < 1 && hepTop_pT_reco > 200 && hepTop_nExcSubJet_reco >= 3 && hepTop_nearestGenLepW_index >= 0 && Wlep_pid_truth[hepTop_nearestGenLepW_index] > 0" \
+#    --xTitle "Image x-coordinate" \
+#    --yTitle "Image y-coordinate" \
+#    --zTitle "Fraction of jet energy" \
+#    --xMin -1 \
+#    --xMax +1 \
+#    --yMin -1 \
+#    --yMax +1 \
+#    --zMin 1e-6 \
+#    --zMax 1e-1 \
+#    --logZ \
+#    --title "W^{-}_{lep} jet image from WJets" \
+#    --outFileName "jetImage_lepWm_boosted" \
+#"""
+#
+#cmdStr = cleanSpaces(cmdStr)
+#job = pool.apply_async(os.system, (), dict(command = cmdStr))
+#l_job.append(job)
+#
+#
+#cmdStr = """ \
+#    python -u plotJetImage.py \
+#    --nEventMax 100000 \
+#    --process "l_ntupleFile_W_lep" \
+#    --plotStr "h2_hepTop_boosted_fracE_phiEtaPlane_reco" \
+#    --cutStr "hepTop_genLepW_deltaR_reco < 1 && hepTop_pT_reco > 200 && hepTop_nExcSubJet_reco >= 3 && hepTop_nearestGenLepW_index >= 0 && Wlep_pid_truth[hepTop_nearestGenLepW_index] < 0" \
+#    --xTitle "Image x-coordinate" \
+#    --yTitle "Image y-coordinate" \
+#    --zTitle "Fraction of jet energy" \
+#    --xMin -1 \
+#    --xMax +1 \
+#    --yMin -1 \
+#    --yMax +1 \
+#    --zMin 1e-6 \
+#    --zMax 1e-1 \
+#    --logZ \
+#    --title "W^{+}_{lep} jet image from WJets" \
+#    --outFileName "jetImage_lepWp_boosted" \
+#"""
+#
+#cmdStr = cleanSpaces(cmdStr)
+#job = pool.apply_async(os.system, (), dict(command = cmdStr))
+#l_job.append(job)
+
+
+#cmdStr = """ \
+#    python -u plotJetImage.py \
+#    --nEventMax 500000 \
+#    --process "l_ntupleFile_W_lep" \
+#    --plotStr "h2_hepTop_boosted_track_fracE_phiEtaPlane_reco" \
+#    --cutStr "hepTop_genLepW_deltaR_reco < 1 and hepTop_pT_reco > 200 and hepTop_nExcSubJet_reco >= 3" \
+#    --xTitle "Image x-coordinate" \
+#    --yTitle "Image y-coordinate" \
+#    --zTitle "Fraction of jet energy" \
+#    --xMin -1 \
+#    --xMax +1 \
+#    --yMin -1 \
+#    --yMax +1 \
+#    --zMin 1e-6 \
+#    --zMax 1e-1 \
+#    --logZ \
+#    --title "W^{lep} jet image (tracks) from WJets" \
+#    --outFileName "jetImage_lepW_boosted_track" \
+#"""
+#
+#cmdStr = cleanSpaces(cmdStr)
+#job = pool.apply_async(os.system, (), dict(command = cmdStr))
+#l_job.append(job)
+#
+#
+#cmdStr = """ \
+#    python -u plotJetImage.py \
+#    --nEventMax 500000 \
+#    --process "l_ntupleFile_W_lep" \
+#    --plotStr "h2_hepTop_boosted_photon_fracE_phiEtaPlane_reco" \
+#    --cutStr "hepTop_genLepW_deltaR_reco < 1 and hepTop_pT_reco > 200 and hepTop_nExcSubJet_reco >= 3" \
+#    --xTitle "Image x-coordinate" \
+#    --yTitle "Image y-coordinate" \
+#    --zTitle "Fraction of jet energy" \
+#    --xMin -1 \
+#    --xMax +1 \
+#    --yMin -1 \
+#    --yMax +1 \
+#    --zMin 1e-6 \
+#    --zMax 1e-1 \
+#    --logZ \
+#    --title "W^{lep} jet image (photons) from WJets" \
+#    --outFileName "jetImage_lepW_boosted_photon" \
+#"""
+#
+#cmdStr = cleanSpaces(cmdStr)
+#job = pool.apply_async(os.system, (), dict(command = cmdStr))
+#l_job.append(job)
+#
+#
+#cmdStr = """ \
+#    python -u plotJetImage.py \
+#    --nEventMax 500000 \
+#    --process "l_ntupleFile_W_lep" \
+#    --plotStr "h2_hepTop_boosted_neutralHad_fracE_phiEtaPlane_reco" \
+#    --cutStr "hepTop_genLepW_deltaR_reco < 1 and hepTop_pT_reco > 200 and hepTop_nExcSubJet_reco >= 3" \
+#    --xTitle "Image x-coordinate" \
+#    --yTitle "Image y-coordinate" \
+#    --zTitle "Fraction of jet energy" \
+#    --xMin -1 \
+#    --xMax +1 \
+#    --yMin -1 \
+#    --yMax +1 \
+#    --zMin 1e-6 \
+#    --zMax 1e-1 \
+#    --logZ \
+#    --title "W^{lep} jet image (neutral hadrons) from WJets" \
+#    --outFileName "jetImage_lepW_boosted_neutralHad" \
+#"""
+#
+#cmdStr = cleanSpaces(cmdStr)
+#job = pool.apply_async(os.system, (), dict(command = cmdStr))
+#l_job.append(job)
+
+
+
+# #############################################################################################
+# ######################################## Z (had) ########################################
+# #############################################################################################
+#
+#cmdStr = """ \
+#    python -u plotJetImage.py \
+#    --nEventMax 500000 \
+#    --process "l_ntupleFile_Z_had" \
+#    --plotStr "h2_hepTop_boosted_fracE_phiEtaPlane_reco" \
+#    --cutStr "hepTop_genHadZ_deltaR_reco < 1 and hepTop_pT_reco > 200 and hepTop_nExcSubJet_reco >= 3" \
+#    --xTitle "Image x-coordinate" \
+#    --yTitle "Image y-coordinate" \
+#    --zTitle "Fraction of jet energy" \
+#    --xMin -1 \
+#    --xMax +1 \
+#    --yMin -1 \
+#    --yMax +1 \
+#    --zMin 1e-6 \
+#    --zMax 1e-1 \
+#    --logZ \
+#    --title "Z^{had} jet image from ZJets" \
+#    --outFileName "jetImage_hadZ_boosted" \
+#"""
+#
+#cmdStr = cleanSpaces(cmdStr)
+#job = pool.apply_async(os.system, (), dict(command = cmdStr))
+#l_job.append(job)
+#
+#
+#cmdStr = """ \
+#    python -u plotJetImage.py \
+#    --nEventMax 500000 \
+#    --process "l_ntupleFile_Z_had" \
+#    --plotStr "h2_hepTop_boosted_track_fracE_phiEtaPlane_reco" \
+#    --cutStr "hepTop_genHadZ_deltaR_reco < 1 and hepTop_pT_reco > 200 and hepTop_nExcSubJet_reco >= 3" \
+#    --xTitle "Image x-coordinate" \
+#    --yTitle "Image y-coordinate" \
+#    --zTitle "Fraction of jet energy" \
+#    --xMin -1 \
+#    --xMax +1 \
+#    --yMin -1 \
+#    --yMax +1 \
+#    --zMin 1e-6 \
+#    --zMax 1e-1 \
+#    --logZ \
+#    --title "Z^{had} jet image (tracks) from ZJets" \
+#    --outFileName "jetImage_hadZ_boosted_track" \
+#"""
+#
+#cmdStr = cleanSpaces(cmdStr)
+#job = pool.apply_async(os.system, (), dict(command = cmdStr))
+#l_job.append(job)
+#
+#
+#cmdStr = """ \
+#    python -u plotJetImage.py \
+#    --nEventMax 500000 \
+#    --process "l_ntupleFile_Z_had" \
+#    --plotStr "h2_hepTop_boosted_photon_fracE_phiEtaPlane_reco" \
+#    --cutStr "hepTop_genHadZ_deltaR_reco < 1 and hepTop_pT_reco > 200 and hepTop_nExcSubJet_reco >= 3" \
+#    --xTitle "Image x-coordinate" \
+#    --yTitle "Image y-coordinate" \
+#    --zTitle "Fraction of jet energy" \
+#    --xMin -1 \
+#    --xMax +1 \
+#    --yMin -1 \
+#    --yMax +1 \
+#    --zMin 1e-6 \
+#    --zMax 1e-1 \
+#    --logZ \
+#    --title "Z^{had} jet image (photons) from ZJets" \
+#    --outFileName "jetImage_hadZ_boosted_photon" \
+#"""
+#
+#cmdStr = cleanSpaces(cmdStr)
+#job = pool.apply_async(os.system, (), dict(command = cmdStr))
+#l_job.append(job)
+#
+#
+#cmdStr = """ \
+#    python -u plotJetImage.py \
+#    --nEventMax 500000 \
+#    --process "l_ntupleFile_Z_had" \
+#    --plotStr "h2_hepTop_boosted_neutralHad_fracE_phiEtaPlane_reco" \
+#    --cutStr "hepTop_genHadZ_deltaR_reco < 1 and hepTop_pT_reco > 200 and hepTop_nExcSubJet_reco >= 3" \
+#    --xTitle "Image x-coordinate" \
+#    --yTitle "Image y-coordinate" \
+#    --zTitle "Fraction of jet energy" \
+#    --xMin -1 \
+#    --xMax +1 \
+#    --yMin -1 \
+#    --yMax +1 \
+#    --zMin 1e-6 \
+#    --zMax 1e-1 \
+#    --logZ \
+#    --title "Z^{had} jet image (neutral hadrons) from ZJets" \
+#    --outFileName "jetImage_hadZ_boosted_neutralHad" \
+#"""
+#
+#cmdStr = cleanSpaces(cmdStr)
+#job = pool.apply_async(os.system, (), dict(command = cmdStr))
+#l_job.append(job)
+
+
+
+# #############################################################################################
+# ######################################## Z (lep) ########################################
+# #############################################################################################
+#
+#cmdStr = """ \
+#    python -u plotJetImage.py \
+#    --nEventMax 500000 \
+#    --process "l_ntupleFile_Z_lep" \
+#    --plotStr "h2_hepTop_boosted_fracE_phiEtaPlane_reco" \
+#    --cutStr "hepTop_genLepZ_deltaR_reco < 1 and hepTop_pT_reco > 200 and hepTop_nExcSubJet_reco >= 3" \
+#    --xTitle "Image x-coordinate" \
+#    --yTitle "Image y-coordinate" \
+#    --zTitle "Fraction of jet energy" \
+#    --xMin -1 \
+#    --xMax +1 \
+#    --yMin -1 \
+#    --yMax +1 \
+#    --zMin 1e-6 \
+#    --zMax 1e-1 \
+#    --logZ \
+#    --title "Z^{lep} jet image from ZJets" \
+#    --outFileName "jetImage_lepZ_boosted" \
+#"""
+#
+#cmdStr = cleanSpaces(cmdStr)
+#job = pool.apply_async(os.system, (), dict(command = cmdStr))
+#l_job.append(job)
+#
+#
+#cmdStr = """ \
+#    python -u plotJetImage.py \
+#    --nEventMax 500000 \
+#    --process "l_ntupleFile_Z_lep" \
+#    --plotStr "h2_hepTop_boosted_track_fracE_phiEtaPlane_reco" \
+#    --cutStr "hepTop_genLepZ_deltaR_reco < 1 and hepTop_pT_reco > 200 and hepTop_nExcSubJet_reco >= 3" \
+#    --xTitle "Image x-coordinate" \
+#    --yTitle "Image y-coordinate" \
+#    --zTitle "Fraction of jet energy" \
+#    --xMin -1 \
+#    --xMax +1 \
+#    --yMin -1 \
+#    --yMax +1 \
+#    --zMin 1e-6 \
+#    --zMax 1e-1 \
+#    --logZ \
+#    --title "Z^{lep} jet image (tracks) from ZJets" \
+#    --outFileName "jetImage_lepZ_boosted_track" \
+#"""
+#
+#cmdStr = cleanSpaces(cmdStr)
+#job = pool.apply_async(os.system, (), dict(command = cmdStr))
+#l_job.append(job)
+#
+#
+#cmdStr = """ \
+#    python -u plotJetImage.py \
+#    --nEventMax 500000 \
+#    --process "l_ntupleFile_Z_lep" \
+#    --plotStr "h2_hepTop_boosted_photon_fracE_phiEtaPlane_reco" \
+#    --cutStr "hepTop_genLepZ_deltaR_reco < 1 and hepTop_pT_reco > 200 and hepTop_nExcSubJet_reco >= 3" \
+#    --xTitle "Image x-coordinate" \
+#    --yTitle "Image y-coordinate" \
+#    --zTitle "Fraction of jet energy" \
+#    --xMin -1 \
+#    --xMax +1 \
+#    --yMin -1 \
+#    --yMax +1 \
+#    --zMin 1e-6 \
+#    --zMax 1e-1 \
+#    --logZ \
+#    --title "Z^{lep} jet image (photons) from ZJets" \
+#    --outFileName "jetImage_lepZ_boosted_photon" \
+#"""
+#
+#cmdStr = cleanSpaces(cmdStr)
+#job = pool.apply_async(os.system, (), dict(command = cmdStr))
+#l_job.append(job)
+#
+#
+#cmdStr = """ \
+#    python -u plotJetImage.py \
+#    --nEventMax 500000 \
+#    --process "l_ntupleFile_Z_lep" \
+#    --plotStr "h2_hepTop_boosted_neutralHad_fracE_phiEtaPlane_reco" \
+#    --cutStr "hepTop_genLepZ_deltaR_reco < 1 and hepTop_pT_reco > 200 and hepTop_nExcSubJet_reco >= 3" \
+#    --xTitle "Image x-coordinate" \
+#    --yTitle "Image y-coordinate" \
+#    --zTitle "Fraction of jet energy" \
+#    --xMin -1 \
+#    --xMax +1 \
+#    --yMin -1 \
+#    --yMax +1 \
+#    --zMin 1e-6 \
+#    --zMax 1e-1 \
+#    --logZ \
+#    --title "Z^{lep} jet image (neutral hadrons) from ZJets" \
+#    --outFileName "jetImage_lepZ_boosted_neutralHad" \
+#"""
+#
+#cmdStr = cleanSpaces(cmdStr)
+#job = pool.apply_async(os.system, (), dict(command = cmdStr))
+#l_job.append(job)
+
+
+
 # ##############################################################################################
 # ######################################## stop-L (had) ########################################
 # ##############################################################################################

@@ -22,6 +22,8 @@ import mxnet_train_info
 
 import ROOT
 
+ROOT.gROOT.SetBatch(1)
+
 
 ROOT.gSystem.Load("HeaderFiles/CustomRootDict_cc.so")
 

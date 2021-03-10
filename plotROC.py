@@ -23,6 +23,8 @@ import mxnet_train_info
 
 import ROOT
 
+ROOT.gROOT.SetBatch(1)
+
 
 #matplotlib.pyplot.rc("text", usetex = True)
 #matplotlib.rcParams["text.latex.preamble"] += [r"\usepackage{amsmath}"]

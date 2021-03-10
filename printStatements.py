@@ -6,52 +6,77 @@ outfileName = "statements.txt"
 toReplace = "$$$"
 
 l_str = [
-    "lepTop_pT_truth",
-    "lepTop_eta_truth",
-    "lepTop_phi_truth",
-    "lepTop_E_truth",
-    "lepTop_px_truth",
-    "lepTop_py_truth",
-    "lepTop_pz_truth",
+    "hadZ_n_truth",
+    "hadZ_pT_truth",
+    "hadZ_eta_truth",
+    "hadZ_phi_truth",
+    "hadZ_m_truth",
+    "hadZ_E_truth",
+    "hadZ_px_truth",
+    "hadZ_py_truth",
+    "hadZ_pz_truth",
     
-    "lepTopB_pT_truth",
-    "lepTopB_eta_truth",
-    "lepTopB_phi_truth",
-    "lepTopB_E_truth",
-    "lepTopB_px_truth",
-    "lepTopB_py_truth",
-    "lepTopB_pz_truth",
+    "Zq1_pT_truth",
+    "Zq1_eta_truth",
+    "Zq1_phi_truth",
+    "Zq1_E_truth",
+    "Zq1_px_truth",
+    "Zq1_py_truth",
+    "Zq1_pz_truth",
+    "Zq1_pid_truth",
+    "Zq1_Zq2deltaR_truth",
+
+    "Zq2_pT_truth",
+    "Zq2_eta_truth",
+    "Zq2_phi_truth",
+    "Zq2_E_truth",
+    "Zq2_px_truth",
+    "Zq2_py_truth",
+    "Zq2_pz_truth",
+    "Zq2_pid_truth",
     
-    "lepTopW_pT_truth",
-    "lepTopW_eta_truth",
-    "lepTopW_phi_truth",
-    "lepTopW_E_truth",
-    "lepTopW_px_truth",
-    "lepTopW_py_truth",
-    "lepTopW_pz_truth",
+    "lepZ_n_truth",
+    "lepZ_pT_truth",
+    "lepZ_eta_truth",
+    "lepZ_phi_truth",
+    "lepZ_m_truth",
+    "lepZ_E_truth",
+    "lepZ_px_truth",
+    "lepZ_py_truth",
+    "lepZ_pz_truth",
     
-    "Wlep_pT_truth",
-    "Wlep_eta_truth",
-    "Wlep_phi_truth",
-    "Wlep_E_truth",
-    "Wlep_px_truth",
-    "Wlep_py_truth",
-    "Wlep_pz_truth",
-    "Wlep_pid_truth",
+    "Zlep1_pT_truth",
+    "Zlep1_eta_truth",
+    "Zlep1_phi_truth",
+    "Zlep1_E_truth",
+    "Zlep1_px_truth",
+    "Zlep1_py_truth",
+    "Zlep1_pz_truth",
+    "Zlep1_pid_truth",
+    "Zlep1_Zlep2deltaR_truth",
+    
+    "Zlep2_pT_truth",
+    "Zlep2_eta_truth",
+    "Zlep2_phi_truth",
+    "Zlep2_E_truth",
+    "Zlep2_px_truth",
+    "Zlep2_py_truth",
+    "Zlep2_pz_truth",
+    "Zlep2_pid_truth",
 ]
 
 
 templateStr = (
-    #"sprintf(name, \"%s\");\n"
-    #"tree->Branch(name, &v_%s);"
+    #"sprintf(name, \"%s\")",\n"
+    #"tree->Branch(name, &v_%s)","
     
-    "tree->Branch(\"%s\", &v_%s);"
+    "tree->Branch(\"{name}\", &v_{name});"
 )
 linegaps = 0
 
 
 #templateStr = (
-#    "treeOutput->v_%s.push_back();"
+#    "treeOutput->v_%s.push_back()","
 #)
 #linegaps = 0
 
@@ -63,7 +88,7 @@ with open(outfileName, "w") as f :
         
         #temp_str = templateStr %(l_str[iEntry])
         temp_str = templateStr
-        temp_str = temp_str.replace("%s", l_str[iEntry])
+        temp_str = temp_str.format(name = l_str[iEntry])
         
         print temp_str + "\n" * linegaps
         
